@@ -127,6 +127,18 @@ public class BoardTest {
 		assertEquals(4, board.getCell(3, 0).getValue());
 	}
 
+	@Test
+	void winingBoardTest() {
+	    Board b = new Board();
+		b.setCell(0, 3, new Cell(2048));
+		assertTrue(b.isWinningBoard());
+	}
 
 
+	@Test
+	void winingBoardTestTwo() {
+	    Board b = new Board();
+		b.setCell(3, 3, new Cell(2048));
+		assertTrue(b.isWinningBoard());
+	}
 }
