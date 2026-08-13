@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 
 public class BoardTest {
 
+    // ----- CONSTRUCTOR -----
+
     @Test
     public void constructorDefaultTest() {
         Board board = new Board();
@@ -65,6 +67,8 @@ public class BoardTest {
         assertEquals(2, noEmptyCells);
     }
 
+    // ----- LOSING BOARD -----
+
     @Test
     public void isLosingBoardTest() {
         // Arrange
@@ -93,10 +97,9 @@ public class BoardTest {
         assertEquals(expected, result);
     }
 
-	@Test 
+	@Test
 	public  void isLosingBoardFailedMergedInLastColumn(){
 		Board board = new Board();
-		
 		int[][] values = {
         {2, 4, 8, 8},
         {32, 64, 128, 256},
@@ -114,9 +117,293 @@ public class BoardTest {
 	}
 
 	@Test
+	void winingBoardTestTwo() {
+	    Board b = new Board();
+		b.setCell(3, 3, new Cell(2048));
+		assertTrue(b.isWinningBoard());
+	}
+
+	@Test
+	void winingBoardTest() {
+	    Board b = new Board();
+		b.setCell(0, 3, new Cell(2048));
+		assertTrue(b.isWinningBoard());
+	}
+	
+	// ----- MOVE UP/DOWN/LEFT/RIGHT -----
+
+	// ----- Single Tile -----
+
+	@Test
+	public void testMoveUpSingleTile(){
+		Board board = new Board();
+		clearBoard(board);
+
+		board.setCell(2, 0, new Cell(2));
+		
+		boolean moved = board.moveUp();
+
+		assertTrue(moved);
+		assertEquals(2, board.getCell(0, 0).getValue());
+		assertEquals(0, board.getScore());
+	}
+
+	@Test
+	public void testMoveDownSingleTile(){
+		Board board = new Board();
+		clearBoard(board);
+
+		board.setCell(1, 0, new Cell(2));
+
+		boolean moved = board.moveDown();
+
+		assertTrue(moved);
+		assertEquals(2, board.getCell(3, 0).getValue());
+		assertEquals(0, board.getScore());
+
+	}
+
+	@Test
+	public void testMoveRightSingleTile(){
+		Board board = new Board();
+		clearBoard(board);
+
+		board.setCell(1, 0, new Cell(2));
+
+		boolean moved = board.moveRight();
+
+		assertTrue(moved);
+		assertEquals(2, board.getCell(1, 3).getValue());
+		assertEquals(0, board.getScore());
+
+	}
+
+	@Test
+	public void testMoveLeftSingleTile(){
+		Board board = new Board();
+		clearBoard(board);
+
+		board.setCell(1, 3, new Cell(2));
+
+		boolean moved = board.moveLeft();
+
+		assertTrue(moved);
+		assertEquals(2, board.getCell(1, 0).getValue());
+		assertEquals(0, board.getScore());
+
+	}
+
+	// ----- Two Equal Tiles -----
+
+	@Test
+	public void testMoveUpTwoEqualTiles(){
+		Board board = new Board();
+		clearBoard(board);
+
+		board.setCell(1, 0, new Cell(2));
+		board.setCell(3, 0, new Cell(2));
+
+		boolean moved = board.moveUp();
+
+		assertTrue(moved);
+		assertEquals(4, board.getCell(0, 0).getValue());
+		assertEquals(4, board.getScore());
+	}
+
+	@Test
+	public void testMoveDownTwoEqualTiles(){
+		Board board = new Board();
+		clearBoard(board);
+
+		board.setCell(1, 0, new Cell(2));
+		board.setCell(3, 0, new Cell(2));
+
+		boolean moved = board.moveDown();
+
+		assertTrue(moved);
+		assertEquals(4, board.getCell(3, 0).getValue());
+		assertEquals(4, board.getScore());
+
+	}
+
+	@Test
+	public void testMoveRightTwoEqualTiles(){
+		Board board = new Board();
+		clearBoard(board);
+
+		board.setCell(1, 0, new Cell(2));
+		board.setCell(1, 3, new Cell(2));
+
+		boolean moved = board.moveRight();
+
+		assertTrue(moved);
+		assertEquals(4, board.getCell(1, 3).getValue());
+		assertEquals(4, board.getScore());
+
+	}
+
+	@Test
+	public void testMoveLeftTwoEqualTiles(){
+		Board board = new Board();
+		clearBoard(board);
+
+		board.setCell(1, 0, new Cell(2));
+		board.setCell(1, 3, new Cell(2));
+
+		boolean moved = board.moveLeft();
+
+		assertTrue(moved);
+		assertEquals(4, board.getCell(1, 0).getValue());
+		assertEquals(4, board.getScore());
+
+	}
+
+	// ----- Three Equal Tiles -----
+
+	@Test
+	public void moveUpThreeEqualTiles(){
+		Board board = new Board();
+		clearBoard(board);
+
+		board.setCell(0, 0, new Cell(2));
+		board.setCell(1, 0, new Cell(2));
+		board.setCell(2, 0, new Cell(2));
+
+		boolean moved = board.moveUp();
+
+		assertTrue(moved);
+		assertEquals(4, board.getCell(0, 0).getValue());
+		assertEquals(2, board.getCell(1, 0).getValue());
+		assertEquals(4, board.getScore());
+	}
+
+	@Test
+	public void moveDownThreeEqualTiles(){
+		Board board = new Board();
+		clearBoard(board);
+
+		board.setCell(0, 0, new Cell(2));
+		board.setCell(1, 0, new Cell(2));
+		board.setCell(2, 0, new Cell(2));
+
+		boolean moved = board.moveDown();
+
+		assertTrue(moved);
+		assertEquals(4, board.getCell(0, 3).getValue());
+		assertEquals(2, board.getCell(0, 2).getValue());
+		assertEquals(4, board.getScore());
+	}
+
+	@Test
+	public void moveRightThreeEqualTiles(){
+		Board board = new Board();
+		clearBoard(board);
+
+		board.setCell(0, 0, new Cell(2));
+		board.setCell(0, 1, new Cell(2));
+		board.setCell(0, 2, new Cell(2));
+
+		boolean moved = board.moveRight();
+
+		assertTrue(moved);
+		assertEquals(4, board.getCell(0, 3).getValue());
+		assertEquals(2, board.getCell(0, 2).getValue());
+		assertEquals(4, board.getScore());
+	}
+
+	@Test
+	public void moveLeftThreeEqualTiles(){
+		Board board = new Board();
+		clearBoard(board);
+
+		board.setCell(0, 0, new Cell(2));
+		board.setCell(0, 1, new Cell(2));
+		board.setCell(0, 2, new Cell(2));
+
+		boolean moved = board.moveLeft();
+
+		assertTrue(moved);
+		assertEquals(4, board.getCell(0, 0).getValue());
+		assertEquals(2, board.getCell(0, 1).getValue());
+		assertEquals(4, board.getScore());
+	}
+	// ----- Four Equal Tiles -----
+
+	@Test
+	public void moveUpFourEqualTiles(){
+		Board board = new Board();
+		clearBoard(board);
+
+		board.setCell(0, 0, new Cell(2));
+		board.setCell(1, 0, new Cell(2));
+		board.setCell(2, 0, new Cell(2));
+		board.setCell(3, 0, new Cell(2));
+
+		boolean moved = board.moveUp();
+
+		assertTrue(moved);
+		assertEquals(4, board.getCell(0, 0).getValue());
+		assertEquals(4, board.getCell(1, 0).getValue());
+		assertEquals(8, board.getScore());
+	}
+
+    @Test
+	public void moveDownFourEqualTiles(){
+		Board board = new Board();
+		clearBoard(board);
+
+		board.setCell(0, 0, new Cell(2));
+		board.setCell(1, 0, new Cell(2));
+		board.setCell(2, 0, new Cell(2));
+		board.setCell(3, 0, new Cell(2));
+
+		boolean moved = board.moveDown();
+
+		assertTrue(moved);
+		assertEquals(4, board.getCell(3, 0).getValue());
+		assertEquals(4, board.getCell(2, 0).getValue());
+		assertEquals(8, board.getScore());
+	}
+
+	@Test
+	public void moveRightFourEqualTiles(){
+		Board board = new Board();
+		clearBoard(board);
+
+		board.setCell(0, 0, new Cell(2));
+		board.setCell(0, 1, new Cell(2));
+		board.setCell(0, 2, new Cell(2));
+		board.setCell(0, 3, new Cell(2));
+
+		boolean moved = board.moveRight();
+
+		assertTrue(moved);
+		assertEquals(4, board.getCell(0, 3).getValue());
+		assertEquals(4, board.getCell(0, 2).getValue());
+		assertEquals(8, board.getScore());
+	}
+
+	@Test
+	public void moveLeftFourEqualTiles(){
+		Board board = new Board();
+		clearBoard(board);
+
+		board.setCell(0, 0, new Cell(2));
+		board.setCell(0, 1, new Cell(2));
+		board.setCell(0, 2, new Cell(2));
+		board.setCell(0, 3, new Cell(2));
+
+		boolean moved = board.moveLeft();
+
+		assertTrue(moved);
+		assertEquals(4, board.getCell(0, 0).getValue());
+		assertEquals(4, board.getCell(0, 1).getValue());
+		assertEquals(8, board.getScore());
+	}
+
+	@Test
 	public void moveDowndoesNotProccesTopRow(){
 		Board board = new Board();
-		
 		board.setCell(0, 0, new Cell(2));
     	board.setCell(1, 0, new Cell(2));
     	board.setCell(2, 0, Cell.EMPTY);
@@ -130,5 +417,17 @@ public class BoardTest {
 	}
 
 
+	// ----- AUX METHODS -----
 
+	/**
+	 * Set all tiles to empty
+	 */
+	private void clearBoard(Board board){
+		for(int i = 0; i < board.getSize(); i++){
+			for(int j = 0; j < board.getSize(); j++){
+				board.setCell(i, j, Cell.EMPTY);
+			}
+		}
+
+	}
 }
