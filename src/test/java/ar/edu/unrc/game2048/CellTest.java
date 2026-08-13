@@ -3,6 +3,7 @@ package ar.edu.unrc.game2048;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+
 public class CellTest {
 
     @Test
@@ -32,4 +33,43 @@ public class CellTest {
         // Assert
         assertThrows(IllegalArgumentException.class,() -> cell.canMergeWith(cell2), "Cannot read field value because other is null.");
     }
+	@Test
+	public void nonEqualsTest() {
+		Cell cell = new Cell(2);
+		Cell otherCell = new Cell(4);
+
+		assertNotEquals(cell, otherCell);
+	}
+
+	@Test
+	public void equalsTest() {
+		Cell cell = new Cell(32);
+		Cell otherCell = new Cell(32);
+		assertEquals(cell, otherCell);
+	}
+
+	@Test
+	public void equalToNull() {
+		Cell cell = new Cell(16);
+		assertFalse(cell.equals(null));
+	}
+
+	@Test
+	public void equalToItself() {
+		Cell cell = new Cell(16);
+		assertTrue(cell.equals(cell));
+	}
+
+	@Test
+	public void equalToOtherType() {
+		int value = 32;
+		Cell cell = new Cell(value);
+		assertFalse(cell.equals(value));
+	}
+
+	@Test
+	public void equalToCellEmpty() {
+		Cell cell = new Cell(0);
+		assertTrue(cell.equals(Cell.EMPTY));
+	}
 }
