@@ -65,4 +65,81 @@ public class BoardTest {
 
 		assertEquals(2, noEmptyCells);
 	}
+
+	@Test
+	public void setAndGetTheSameValueTest() {
+		Board board = new Board();
+		Cell cell = new Cell(32);
+
+		board.setCell(0,2,cell);
+		assertTrue(cell.equals(board.getCell(0,2)));
+	}
+
+	@Test
+	public void getCellNotNull() {
+		Board board = new Board();
+		for (int r = 0 ; r < board.getSize() ; r++) {
+			for (int c = 0 ; c < board.getSize() ; c++) {
+				assertNotNull(board.getCell(r, c));
+			}
+		}
+	}
+
+	@Test
+	public void invalidGetCell() {
+		Board board = new Board();
+		assertThrows(IndexOutOfBoundsException.class, ()-> {
+			board.getCell(0,4);
+		});
+		assertThrows(IndexOutOfBoundsException.class, ()-> {
+			board.getCell(4,2);
+		});
+		assertThrows(IndexOutOfBoundsException.class, ()-> {
+			board.getCell(-1,2);
+		});
+		assertThrows(IndexOutOfBoundsException.class, ()-> {
+			board.getCell(1,-2);
+		});
+	}
+
+	@Test
+	public void setCellAlreadySetted() {
+		Board board = new Board();
+		Cell cell = new Cell(16);
+		board.setCell(0,3,cell);
+		assertEquals(cell, board.getCell(0,3));
+
+		Cell newCell = new Cell(32);
+		board.setCell(0, 3, newCell);
+		assertEquals(newCell, board.getCell(0,3));
+	}
+
+	@Test
+	public void setNotNullCellTest() {
+		Board board = new Board();
+		assertThrows(IllegalArgumentException.class, ()-> {
+			board.setCell(0,0,null);
+		});
+	}
+
+	@Test
+	public void setCellOutofBoundsTest() {
+		Board board = new Board();
+		Cell cell = new Cell(2);
+		assertThrows(IndexOutOfBoundsException.class, ()-> {
+			board.setCell(4,0,cell);
+		});
+		assertThrows(IndexOutOfBoundsException.class, ()-> {
+			board.setCell(0,4,cell);
+		});
+		assertThrows(IndexOutOfBoundsException.class, ()-> {
+			board.setCell(-1,1,cell);
+		});
+		assertThrows(IndexOutOfBoundsException.class, ()-> {
+			board.setCell(1,-1,cell);
+		});
+		assertThrows(IndexOutOfBoundsException.class, ()-> {
+			board.setCell(-2,-3,cell);
+		});
+	}
 }
