@@ -116,7 +116,20 @@ public class BoardTest {
 		assertFalse(board.isLosingBoard());
 	}
 
+	@Test
+	void winingBoardTestTwo() {
+	    Board b = new Board();
+		b.setCell(3, 3, new Cell(2048));
+		assertTrue(b.isWinningBoard());
+	}
 
+	@Test
+	void winingBoardTest() {
+	    Board b = new Board();
+		b.setCell(0, 3, new Cell(2048));
+		assertTrue(b.isWinningBoard());
+	}
+	
 	// ----- MOVE UP/DOWN/LEFT/RIGHT -----
 
 	// ----- Single Tile -----
@@ -415,6 +428,7 @@ public class BoardTest {
 				board.setCell(i, j, Cell.EMPTY);
 			}
 		}
+
 	}
 
 	@Test
