@@ -97,10 +97,9 @@ public class BoardTest {
         assertEquals(expected, result);
     }
 
-	@Test 
+	@Test
 	public  void isLosingBoardFailedMergedInLastColumn(){
 		Board board = new Board();
-		
 		int[][] values = {
         {2, 4, 8, 8},
         {32, 64, 128, 256},
@@ -117,7 +116,20 @@ public class BoardTest {
 		assertFalse(board.isLosingBoard());
 	}
 
+	@Test
+	void winingBoardTestTwo() {
+	    Board b = new Board();
+		b.setCell(3, 3, new Cell(2048));
+		assertTrue(b.isWinningBoard());
+	}
 
+	@Test
+	void winingBoardTest() {
+	    Board b = new Board();
+		b.setCell(0, 3, new Cell(2048));
+		assertTrue(b.isWinningBoard());
+	}
+	
 	// ----- MOVE UP/DOWN/LEFT/RIGHT -----
 
 	// ----- Single Tile -----
@@ -392,7 +404,6 @@ public class BoardTest {
 	@Test
 	public void moveDowndoesNotProccesTopRow(){
 		Board board = new Board();
-		
 		board.setCell(0, 0, new Cell(2));
     	board.setCell(1, 0, new Cell(2));
     	board.setCell(2, 0, Cell.EMPTY);
@@ -417,5 +428,6 @@ public class BoardTest {
 				board.setCell(i, j, Cell.EMPTY);
 			}
 		}
+
 	}
 }
