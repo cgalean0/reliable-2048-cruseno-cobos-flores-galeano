@@ -289,8 +289,8 @@ public class BoardTest {
 		boolean moved = board.moveDown();
 
 		assertTrue(moved);
-		assertEquals(4, board.getCell(0, 3).getValue());
-		assertEquals(2, board.getCell(0, 2).getValue());
+		assertEquals(4, board.getCell(3, 0).getValue());
+		assertEquals(2, board.getCell(2, 0).getValue());
 		assertEquals(4, board.getScore());
 	}
 
