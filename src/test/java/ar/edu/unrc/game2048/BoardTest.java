@@ -404,6 +404,7 @@ public class BoardTest {
 	@Test
 	public void moveDowndoesNotProccesTopRow(){
 		Board board = new Board();
+    clearBoard(board);
 		board.setCell(0, 0, new Cell(2));
     	board.setCell(1, 0, new Cell(2));
     	board.setCell(2, 0, Cell.EMPTY);
