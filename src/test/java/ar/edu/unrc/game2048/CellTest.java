@@ -2,6 +2,8 @@
 package ar.edu.unrc.game2048;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CellTest {
@@ -15,6 +17,18 @@ public class CellTest {
     public void createCellWithANotPowerOfTwo() {
         assertThrows(IllegalArgumentException.class, () -> new Cell(3), "Cell value must be a power of two.");
     }
+
+	@Test
+	public void createCellWithZero() {
+		Cell cell = new Cell(0);
+		assertEquals(0, cell.getValue());
+	}
+
+	@ParameterizedTest
+	@ValueSource(ints = {2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048})
+	public void createCellWithAPowerOfTwo(int value) {
+		assertEquals(value, new Cell(value).getValue());
+	}
 
     @Test
     public void canMergeWithInvalid() {
