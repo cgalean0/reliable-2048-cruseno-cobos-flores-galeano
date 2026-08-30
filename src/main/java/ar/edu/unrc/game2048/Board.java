@@ -257,28 +257,10 @@ public class Board {
             }
 
             // Remove empty cells (slide up)
-            List<Cell> nonEmpty = new ArrayList<>();
-            for (Cell cell : column) {
-                if (!cell.isEmpty()) {
-                    nonEmpty.add(cell);
-                }
-            }
+            List<Cell> nonEmpty = removeEmptyCells(column);
 
             // Merge adjacent equal cells
-            List<Cell> merged = new ArrayList<>();
-            int i = 0;
-            while (i < nonEmpty.size()) {
-                if (i + 1 < nonEmpty.size() &&
-                        nonEmpty.get(i).canMergeWith(nonEmpty.get(i + 1))) {
-                    Cell mergedCell = nonEmpty.get(i).mergeWith(nonEmpty.get(i + 1));
-                    merged.add(mergedCell);
-                    score += mergedCell.getValue();
-                    i += 2;
-                } else {
-                    merged.add(nonEmpty.get(i));
-                    i++;
-                }
-            }
+            List<Cell> merged = mergeAdjacentEqualCells(nonEmpty);
 
             // Pad with empty cells
             while (merged.size() < size) {
@@ -315,28 +297,10 @@ public class Board {
             }
 
             // Remove empty cells
-            List<Cell> nonEmpty = new ArrayList<>();
-            for (Cell cell : column) {
-                if (!cell.isEmpty()) {
-                    nonEmpty.add(cell);
-                }
-            }
+            List<Cell> nonEmpty = removeEmptyCells(column);
 
             // Merge adjacent equal cells
-            List<Cell> merged = new ArrayList<>();
-            int i = 0;
-            while (i < nonEmpty.size()) {
-                if (i + 1 < nonEmpty.size() &&
-                        nonEmpty.get(i).canMergeWith(nonEmpty.get(i + 1))) {
-                    Cell mergedCell = nonEmpty.get(i).mergeWith(nonEmpty.get(i + 1));
-                    merged.add(mergedCell);
-                    score += mergedCell.getValue();
-                    i += 2;
-                } else {
-                    merged.add(nonEmpty.get(i));
-                    i++;
-                }
-            }
+            List<Cell> merged = mergeAdjacentEqualCells(nonEmpty);
 
             // Pad with empty cells
             while (merged.size() < size) {
@@ -373,28 +337,10 @@ public class Board {
             }
 
             // Remove empty cells
-            List<Cell> nonEmpty = new ArrayList<>();
-            for (Cell cell : rowList) {
-                if (!cell.isEmpty()) {
-                    nonEmpty.add(cell);
-                }
-            }
+            List<Cell> nonEmpty = removeEmptyCells(rowList);
 
             // Merge adjacent equal cells
-            List<Cell> merged = new ArrayList<>();
-            int i = 0;
-            while (i < nonEmpty.size()) {
-                if (i + 1 < nonEmpty.size() &&
-                        nonEmpty.get(i).canMergeWith(nonEmpty.get(i + 1))) {
-                    Cell mergedCell = nonEmpty.get(i).mergeWith(nonEmpty.get(i + 1));
-                    merged.add(mergedCell);
-                    score += mergedCell.getValue();
-                    i += 2;
-                } else {
-                    merged.add(nonEmpty.get(i));
-                    i++;
-                }
-            }
+            List<Cell> merged = mergeAdjacentEqualCells(nonEmpty);
 
             // Pad with empty cells
             while (merged.size() < size) {
@@ -431,28 +377,10 @@ public class Board {
             }
 
             // Remove empty cells
-            List<Cell> nonEmpty = new ArrayList<>();
-            for (Cell cell : rowList) {
-                if (!cell.isEmpty()) {
-                    nonEmpty.add(cell);
-                }
-            }
+            List<Cell> nonEmpty = removeEmptyCells(rowList);
 
             // Merge adjacent equal cells
-            List<Cell> merged = new ArrayList<>();
-            int i = 0;
-            while (i < nonEmpty.size()) {
-                if (i + 1 < nonEmpty.size() &&
-                        nonEmpty.get(i).canMergeWith(nonEmpty.get(i + 1))) {
-                    Cell mergedCell = nonEmpty.get(i).mergeWith(nonEmpty.get(i + 1));
-                    merged.add(mergedCell);
-                    score += mergedCell.getValue();
-                    i += 2;
-                } else {
-                    merged.add(nonEmpty.get(i));
-                    i++;
-                }
-            }
+            List<Cell> merged = mergeAdjacentEqualCells(nonEmpty);
 
             // Pad with empty cells
             while (merged.size() < size) {
@@ -471,6 +399,35 @@ public class Board {
         }
         return moved;
     }
+
+    // Remove empty cells
+    private List<Cell> removeEmptyCells(List<Cell> cellList) {
+        List<Cell> nonEmpty = new ArrayList<>();
+
+        for (Cell cell: cellList) {
+            if (!cell.isEmpty()) nonEmpty.add(cell);
+        }
+        return nonEmpty;
+    }
+
+    private List<Cell> mergeAdjacentEqualCells(List<Cell> cellList) {
+        List<Cell> merged = new ArrayList<>();
+        int i = 0;
+        while (i < cellList.size()) {
+            if (i + 1 < cellList.size() &&
+                    cellList.get(i).canMergeWith(cellList.get(i + 1))) {
+                Cell mergedCell = cellList.get(i).mergeWith(cellList.get(i + 1));
+                merged.add(mergedCell);
+                score += mergedCell.getValue();
+                i += 2;
+            } else {
+                merged.add(cellList.get(i));
+                i++;
+            }
+        }
+        return merged;
+    }
+
 
     // ==================== RANDOM TILE ADDITION (PRIVATE) ====================
 
