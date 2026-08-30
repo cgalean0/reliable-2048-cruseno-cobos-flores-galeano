@@ -257,12 +257,7 @@ public class Board {
             }
 
             // Remove empty cells (slide up)
-            List<Cell> nonEmpty = new ArrayList<>();
-            for (Cell cell : column) {
-                if (!cell.isEmpty()) {
-                    nonEmpty.add(cell);
-                }
-            }
+            List<Cell> nonEmpty = removeEmptyCells(column);
 
             // Merge adjacent equal cells
             List<Cell> merged = new ArrayList<>();
@@ -315,12 +310,7 @@ public class Board {
             }
 
             // Remove empty cells
-            List<Cell> nonEmpty = new ArrayList<>();
-            for (Cell cell : column) {
-                if (!cell.isEmpty()) {
-                    nonEmpty.add(cell);
-                }
-            }
+            List<Cell> nonEmpty = removeEmptyCells(column);
 
             // Merge adjacent equal cells
             List<Cell> merged = new ArrayList<>();
@@ -373,12 +363,7 @@ public class Board {
             }
 
             // Remove empty cells
-            List<Cell> nonEmpty = new ArrayList<>();
-            for (Cell cell : rowList) {
-                if (!cell.isEmpty()) {
-                    nonEmpty.add(cell);
-                }
-            }
+            List<Cell> nonEmpty = removeEmptyCells(rowList);
 
             // Merge adjacent equal cells
             List<Cell> merged = new ArrayList<>();
@@ -431,12 +416,7 @@ public class Board {
             }
 
             // Remove empty cells
-            List<Cell> nonEmpty = new ArrayList<>();
-            for (Cell cell : rowList) {
-                if (!cell.isEmpty()) {
-                    nonEmpty.add(cell);
-                }
-            }
+            List<Cell> nonEmpty = removeEmptyCells(rowList);
 
             // Merge adjacent equal cells
             List<Cell> merged = new ArrayList<>();
@@ -471,6 +451,17 @@ public class Board {
         }
         return moved;
     }
+
+    // Remove empty cells
+    private List<Cell> removeEmptyCells(List<Cell> cellList) {
+        List<Cell> nonEmpty = new ArrayList<>();
+
+        for (Cell cell: cellList) {
+            if (!cell.isEmpty()) nonEmpty.add(cell);
+        }
+        return nonEmpty;
+    }
+
 
     // ==================== RANDOM TILE ADDITION (PRIVATE) ====================
 
