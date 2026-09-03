@@ -74,7 +74,6 @@
                         <include>**/*Test.java</include>
                     </includes>
                 </configuration>
-                <version>3.1.2</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
