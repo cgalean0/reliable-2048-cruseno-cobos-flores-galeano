@@ -33,6 +33,12 @@ Dentro de lo que fue la covertura del package podemos ver como se cubrieron las 
 
 ![Board.Direction](./assets/2026-09-03-142313_screenshot.png)
 
+## Covertura corriendo PITest
+
+Al correr la siguiente herramienta nos encontramos con las siguientes métricas
+en cuanto a los mutantes que fueron eliminados y aquellos que sobrevivieron.
+
+![General score classes](./assets/2026-09-03-151329_screenshot.png)
 
 ### Nuevas metricas
 
