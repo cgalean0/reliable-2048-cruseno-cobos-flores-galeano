@@ -2,6 +2,9 @@ package ar.edu.unrc.game2048;
 
 import java.util.*;
 
+import main.java.ar.edu.unrc.game2048.GenerateCellStrategy;
+import main.java.ar.edu.unrc.game2048.GenerateRandomCellStrategy;
+
 /**
  * Represents the 2048 game board.
  * The board is a square grid of Cells, typically 4x4.
@@ -36,6 +39,8 @@ public class Board {
      */
     private final Cell[][] grid;
 
+    private GenerateCellStrategy str;
+
     /**
      * Game accumulated score.
      */
@@ -45,7 +50,7 @@ public class Board {
      * Creates a new board of the default size (4x4) with two random tiles.
      */
     public Board() {
-        this(DEFAULT_SIZE);
+        this(DEFAULT_SIZE, new GenerateRandomCellStrategy());
     }
 
     /**
@@ -62,9 +67,21 @@ public class Board {
         this.grid = new Cell[size][size];
         this.score = 0;
         initializeEmpty();
-        addRandomTile();
-        addRandomTile();
+        str.addTile(this);
+        str.addTile(this);
     }
+
+    public Board(int size, GenerateCellStrategy str) {
+            if (size <= 0) {
+                throw new IllegalArgumentException("Board size must be positive: " + size);
+            }
+            this.size = size;
+            this.grid = new Cell[size][size];
+            this.score = 0;
+            initializeEmpty();
+            str.addTile(this);
+            str.addTile(this);
+        }
 
     /**
      * Copy constructor - creates a deep copy of another board.
@@ -275,7 +292,7 @@ public class Board {
 
         boolean moved = !this.equals(previous);
         if (moved) {
-            addRandomTile(); // Add new random tile after successful move
+            str.addTile(this); // Add new random tile after successful move
         }
         return moved;
     }
@@ -315,7 +332,7 @@ public class Board {
 
         boolean moved = !this.equals(previous);
         if (moved) {
-            addRandomTile(); // Add new random tile after successful move
+            str.addTile(this); // Add new random tile after successful move
         }
         return moved;
     }
@@ -355,7 +372,7 @@ public class Board {
 
         boolean moved = !this.equals(previous);
         if (moved) {
-            addRandomTile(); // Add new random tile after successful move
+            str.addTile(this); // Add new random tile after successful move
         }
         return moved;
     }
@@ -395,7 +412,7 @@ public class Board {
 
         boolean moved = !this.equals(previous);
         if (moved) {
-            addRandomTile(); // Add new random tile after successful move
+            str.addTile(this); // Add new random tile after successful move
         }
         return moved;
     }
@@ -438,22 +455,7 @@ public class Board {
      *
      * @return true if a tile was added, false if the board was full
      */
-    private boolean addRandomTile() {
-        Set<Position> empty = getEmptyPositions();
-        if (empty.isEmpty()) {
-            return false;
-        }
 
-        // Choose random position
-        int randomIndex = (int) (Math.random() * empty.size());
-        Position pos = empty.stream().skip(randomIndex).findFirst().get();
-
-        // 90% chance of 2, 10% chance of 4 (standard 2048 rules)
-        int value = Math.random() < 0.9 ? 2 : 4;
-        grid[pos.row][pos.col] = new Cell(value);
-
-        return true;
-    }
 
     // ==================== UTILITY METHODS ====================
 
