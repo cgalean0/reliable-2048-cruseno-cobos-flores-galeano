@@ -12,22 +12,22 @@ import org.junit.jupiter.params.provider.ValueSource;
 public class CellTest {
 
 
-        @Test
-        @DisplayName("should create empty cell with value 0")
-        void testEmptyCell() {
-            Cell cell = new Cell(0);
-            assertTrue(cell.isEmpty());
-            assertEquals(0, cell.getValue());
-            assertEquals(Cell.EMPTY, cell);
-        }
+    @Test
+    @DisplayName("should create empty cell with value 0")
+    void testEmptyCell() {
+        Cell cell = new Cell(0);
+        assertTrue(cell.isEmpty());
+        assertEquals(0, cell.getValue());
+        assertEquals(Cell.EMPTY, cell);
+    }
 
-        @Test
-        @DisplayName("should create valid power-of-two cells")
-        void testValidCell() {
-            Cell cell2 = new Cell(2);
-            assertFalse(cell2.isEmpty());
-            assertEquals(2, cell2.getValue());
-        }
+    @Test
+    @DisplayName("should create valid power-of-two cells")
+    void testValidCell() {
+        Cell cell2 = new Cell(2);
+        assertFalse(cell2.isEmpty());
+        assertEquals(2, cell2.getValue());
+    }
 
     @Test
     public void createCellWithNegativeValue() {
