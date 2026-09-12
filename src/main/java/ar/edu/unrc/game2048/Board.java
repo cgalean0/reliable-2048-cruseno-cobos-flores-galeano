@@ -2,8 +2,8 @@ package ar.edu.unrc.game2048;
 
 import java.util.*;
 
-import main.java.ar.edu.unrc.game2048.GenerateCellStrategy;
-import main.java.ar.edu.unrc.game2048.GenerateRandomCellStrategy;
+import ar.edu.unrc.game2048.GenerateCellStrategy;
+import ar.edu.unrc.game2048.GenerateRandomCellStrategy;
 
 /**
  * Represents the 2048 game board.
@@ -60,15 +60,7 @@ public class Board {
      * @throws IllegalArgumentException if size <= 0
      */
     public Board(int size) {
-        if (size <= 0) {
-            throw new IllegalArgumentException("Board size must be positive: " + size);
-        }
-        this.size = size;
-        this.grid = new Cell[size][size];
-        this.score = 0;
-        initializeEmpty();
-        str.addTile(this);
-        str.addTile(this);
+        this(size, new GenerateRandomCellStrategy());
     }
 
     public Board(int size, GenerateCellStrategy str) {
@@ -78,10 +70,11 @@ public class Board {
             this.size = size;
             this.grid = new Cell[size][size];
             this.score = 0;
+            this.str = str;
             initializeEmpty();
             str.addTile(this);
             str.addTile(this);
-        }
+    }
 
     /**
      * Copy constructor - creates a deep copy of another board.

@@ -1,4 +1,4 @@
-package main.java.ar.edu.unrc.game2048;
+package ar.edu.unrc.game2048;
 
 import ar.edu.unrc.game2048.*;
 import ar.edu.unrc.game2048.Board.Position;
