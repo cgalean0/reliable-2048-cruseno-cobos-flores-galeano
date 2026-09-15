@@ -7750,43 +7750,6 @@ public class RegressionTest0 {
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
-        int int3 = cell1.getValue();
-        boolean boolean4 = cell1.isEmpty();
-        boolean boolean5 = cell1.isEmpty();
-        ar.edu.unrc.game2048.Cell cell7 = new ar.edu.unrc.game2048.Cell((int) (byte) 0);
-        boolean boolean8 = cell7.isEmpty();
-        ar.edu.unrc.game2048.Cell cell9 = ar.edu.unrc.game2048.Cell.EMPTY;
-        ar.edu.unrc.game2048.Cell cell10 = ar.edu.unrc.game2048.Cell.EMPTY;
-        boolean boolean11 = cell9.canMergeWith(cell10);
-        int int12 = cell10.getValue();
-        boolean boolean13 = cell10.isEmpty();
-        boolean boolean14 = cell7.equals((java.lang.Object) cell10);
-        boolean boolean15 = cell1.canMergeWith(cell7);
-        java.lang.String str16 = cell1.toString();
-        org.junit.Assert.assertNotNull(cell0);
-        org.junit.Assert.assertNotNull(cell1);
-        org.junit.Assert.assertTrue("'" + boolean2 + "' != '" + false + "'", boolean2 == false);
-        org.junit.Assert.assertTrue("'" + int3 + "' != '" + 0 + "'", int3 == 0);
-        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + true + "'", boolean4 == true);
-        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + true + "'", boolean5 == true);
-        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + true + "'", boolean8 == true);
-        org.junit.Assert.assertNotNull(cell9);
-        org.junit.Assert.assertNotNull(cell10);
-        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
-        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 0 + "'", int12 == 0);
-        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + true + "'", boolean13 == true);
-        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + true + "'", boolean14 == true);
-        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
-        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "." + "'", str16, ".");
-    }
-
-    @Test
-    public void test183() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test183");
-        ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
-        ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
-        boolean boolean2 = cell0.canMergeWith(cell1);
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell4 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean5 = cell3.canMergeWith(cell4);
@@ -7882,9 +7845,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test184() throws Throwable {
+    public void test183() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test184");
+            System.out.format("%n%s%n", "RegressionTest0.test183");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -7943,9 +7906,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test185() throws Throwable {
+    public void test184() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test185");
+            System.out.format("%n%s%n", "RegressionTest0.test184");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -7976,9 +7939,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test186() throws Throwable {
+    public void test185() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test186");
+            System.out.format("%n%s%n", "RegressionTest0.test185");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell(0);
         boolean boolean3 = cell1.equals((java.lang.Object) 10L);
         ar.edu.unrc.game2048.Cell cell5 = new ar.edu.unrc.game2048.Cell((int) (byte) 0);
@@ -8080,9 +8043,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test187() throws Throwable {
+    public void test186() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test187");
+            System.out.format("%n%s%n", "RegressionTest0.test186");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell(0);
         boolean boolean3 = cell1.equals((java.lang.Object) 10L);
         ar.edu.unrc.game2048.Cell cell5 = new ar.edu.unrc.game2048.Cell((int) (byte) 0);
@@ -8137,9 +8100,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test188() throws Throwable {
+    public void test187() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test188");
+            System.out.format("%n%s%n", "RegressionTest0.test187");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -8210,9 +8173,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test189() throws Throwable {
+    public void test188() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test189");
+            System.out.format("%n%s%n", "RegressionTest0.test188");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -8250,9 +8213,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test190() throws Throwable {
+    public void test189() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test190");
+            System.out.format("%n%s%n", "RegressionTest0.test189");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (short) 0);
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -8292,9 +8255,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test191() throws Throwable {
+    public void test190() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test191");
+            System.out.format("%n%s%n", "RegressionTest0.test190");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -8316,9 +8279,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test192() throws Throwable {
+    public void test191() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test192");
+            System.out.format("%n%s%n", "RegressionTest0.test191");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (short) 0);
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -8364,9 +8327,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test193() throws Throwable {
+    public void test192() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test193");
+            System.out.format("%n%s%n", "RegressionTest0.test192");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (short) 0);
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -8428,9 +8391,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test194() throws Throwable {
+    public void test193() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test194");
+            System.out.format("%n%s%n", "RegressionTest0.test193");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -8515,9 +8478,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test195() throws Throwable {
+    public void test194() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test195");
+            System.out.format("%n%s%n", "RegressionTest0.test194");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -8535,9 +8498,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test196() throws Throwable {
+    public void test195() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test196");
+            System.out.format("%n%s%n", "RegressionTest0.test195");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -8576,9 +8539,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test197() throws Throwable {
+    public void test196() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test197");
+            System.out.format("%n%s%n", "RegressionTest0.test196");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (byte) 0);
         int int2 = cell1.getValue();
         java.lang.String str3 = cell1.toString();
@@ -8589,9 +8552,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test198() throws Throwable {
+    public void test197() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test198");
+            System.out.format("%n%s%n", "RegressionTest0.test197");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell(0);
         boolean boolean3 = cell1.equals((java.lang.Object) 10L);
         ar.edu.unrc.game2048.Cell cell5 = new ar.edu.unrc.game2048.Cell((int) (byte) 0);
@@ -8662,9 +8625,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test199() throws Throwable {
+    public void test198() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test199");
+            System.out.format("%n%s%n", "RegressionTest0.test198");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -8718,9 +8681,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test200() throws Throwable {
+    public void test199() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test200");
+            System.out.format("%n%s%n", "RegressionTest0.test199");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -8799,9 +8762,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test201() throws Throwable {
+    public void test200() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test201");
+            System.out.format("%n%s%n", "RegressionTest0.test200");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -8915,9 +8878,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test202() throws Throwable {
+    public void test201() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test202");
+            System.out.format("%n%s%n", "RegressionTest0.test201");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -8998,9 +8961,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test203() throws Throwable {
+    public void test202() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test203");
+            System.out.format("%n%s%n", "RegressionTest0.test202");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -9083,9 +9046,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test204() throws Throwable {
+    public void test203() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test204");
+            System.out.format("%n%s%n", "RegressionTest0.test203");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -9109,9 +9072,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test205() throws Throwable {
+    public void test204() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test205");
+            System.out.format("%n%s%n", "RegressionTest0.test204");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (byte) 0);
         boolean boolean2 = cell1.isEmpty();
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -9163,9 +9126,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test206() throws Throwable {
+    public void test205() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test206");
+            System.out.format("%n%s%n", "RegressionTest0.test205");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -9248,9 +9211,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test207() throws Throwable {
+    public void test206() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test207");
+            System.out.format("%n%s%n", "RegressionTest0.test206");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -9340,9 +9303,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test208() throws Throwable {
+    public void test207() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test208");
+            System.out.format("%n%s%n", "RegressionTest0.test207");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell(0);
         boolean boolean2 = cell1.isEmpty();
         java.lang.String str3 = cell1.toString();
@@ -9351,9 +9314,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test209() throws Throwable {
+    public void test208() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test209");
+            System.out.format("%n%s%n", "RegressionTest0.test208");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (short) 0);
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -9456,9 +9419,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test210() throws Throwable {
+    public void test209() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test210");
+            System.out.format("%n%s%n", "RegressionTest0.test209");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -9515,9 +9478,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test211() throws Throwable {
+    public void test210() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test211");
+            System.out.format("%n%s%n", "RegressionTest0.test210");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -9591,9 +9554,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test212() throws Throwable {
+    public void test211() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test212");
+            System.out.format("%n%s%n", "RegressionTest0.test211");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -9690,9 +9653,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test213() throws Throwable {
+    public void test212() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test213");
+            System.out.format("%n%s%n", "RegressionTest0.test212");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (byte) 0);
         boolean boolean2 = cell1.isEmpty();
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -9744,9 +9707,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test214() throws Throwable {
+    public void test213() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test214");
+            System.out.format("%n%s%n", "RegressionTest0.test213");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -9762,9 +9725,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test215() throws Throwable {
+    public void test214() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test215");
+            System.out.format("%n%s%n", "RegressionTest0.test214");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (byte) 0);
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -9828,9 +9791,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test216() throws Throwable {
+    public void test215() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test216");
+            System.out.format("%n%s%n", "RegressionTest0.test215");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (short) 0);
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -9862,9 +9825,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test217() throws Throwable {
+    public void test216() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test217");
+            System.out.format("%n%s%n", "RegressionTest0.test216");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -9911,9 +9874,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test218() throws Throwable {
+    public void test217() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test218");
+            System.out.format("%n%s%n", "RegressionTest0.test217");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -9962,9 +9925,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test219() throws Throwable {
+    public void test218() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test219");
+            System.out.format("%n%s%n", "RegressionTest0.test218");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -10004,9 +9967,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test220() throws Throwable {
+    public void test219() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test220");
+            System.out.format("%n%s%n", "RegressionTest0.test219");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -10065,9 +10028,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test221() throws Throwable {
+    public void test220() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test221");
+            System.out.format("%n%s%n", "RegressionTest0.test220");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -10124,9 +10087,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test222() throws Throwable {
+    public void test221() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test222");
+            System.out.format("%n%s%n", "RegressionTest0.test221");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -10175,9 +10138,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test223() throws Throwable {
+    public void test222() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test223");
+            System.out.format("%n%s%n", "RegressionTest0.test222");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -10255,9 +10218,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test224() throws Throwable {
+    public void test223() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test224");
+            System.out.format("%n%s%n", "RegressionTest0.test223");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (byte) 0);
         ar.edu.unrc.game2048.Cell cell3 = new ar.edu.unrc.game2048.Cell((int) (short) 0);
         boolean boolean4 = cell3.isEmpty();
@@ -10303,9 +10266,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test225() throws Throwable {
+    public void test224() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test225");
+            System.out.format("%n%s%n", "RegressionTest0.test224");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         int int1 = cell0.getValue();
         int int2 = cell0.getValue();
@@ -10355,9 +10318,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test226() throws Throwable {
+    public void test225() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test226");
+            System.out.format("%n%s%n", "RegressionTest0.test225");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -10376,9 +10339,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test227() throws Throwable {
+    public void test226() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test227");
+            System.out.format("%n%s%n", "RegressionTest0.test226");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -10423,9 +10386,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test228() throws Throwable {
+    public void test227() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test228");
+            System.out.format("%n%s%n", "RegressionTest0.test227");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (short) 0);
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -10489,9 +10452,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test229() throws Throwable {
+    public void test228() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test229");
+            System.out.format("%n%s%n", "RegressionTest0.test228");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -10524,9 +10487,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test230() throws Throwable {
+    public void test229() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test230");
+            System.out.format("%n%s%n", "RegressionTest0.test229");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (short) 0);
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -10675,9 +10638,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test231() throws Throwable {
+    public void test230() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test231");
+            System.out.format("%n%s%n", "RegressionTest0.test230");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (short) 1);
         ar.edu.unrc.game2048.Cell cell3 = new ar.edu.unrc.game2048.Cell(0);
         boolean boolean5 = cell3.equals((java.lang.Object) 10L);
@@ -10732,9 +10695,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test232() throws Throwable {
+    public void test231() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test232");
+            System.out.format("%n%s%n", "RegressionTest0.test231");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (short) 0);
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -10774,9 +10737,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test233() throws Throwable {
+    public void test232() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test233");
+            System.out.format("%n%s%n", "RegressionTest0.test232");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -10833,9 +10796,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test234() throws Throwable {
+    public void test233() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test234");
+            System.out.format("%n%s%n", "RegressionTest0.test233");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         int int1 = cell0.getValue();
         int int2 = cell0.getValue();
@@ -10883,9 +10846,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test235() throws Throwable {
+    public void test234() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test235");
+            System.out.format("%n%s%n", "RegressionTest0.test234");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         int int1 = cell0.getValue();
         java.lang.String str2 = cell0.toString();
@@ -10946,9 +10909,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test236() throws Throwable {
+    public void test235() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test236");
+            System.out.format("%n%s%n", "RegressionTest0.test235");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell(0);
         boolean boolean2 = cell1.isEmpty();
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -11053,9 +11016,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test237() throws Throwable {
+    public void test236() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test237");
+            System.out.format("%n%s%n", "RegressionTest0.test236");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         int int1 = cell0.getValue();
         java.lang.String str2 = cell0.toString();
@@ -11087,9 +11050,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test238() throws Throwable {
+    public void test237() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test238");
+            System.out.format("%n%s%n", "RegressionTest0.test237");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -11167,9 +11130,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test239() throws Throwable {
+    public void test238() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test239");
+            System.out.format("%n%s%n", "RegressionTest0.test238");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (byte) 0);
         boolean boolean2 = cell1.isEmpty();
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -11190,9 +11153,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test240() throws Throwable {
+    public void test239() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test240");
+            System.out.format("%n%s%n", "RegressionTest0.test239");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -11293,9 +11256,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test241() throws Throwable {
+    public void test240() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test241");
+            System.out.format("%n%s%n", "RegressionTest0.test240");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (short) 0);
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -11314,9 +11277,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test242() throws Throwable {
+    public void test241() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test242");
+            System.out.format("%n%s%n", "RegressionTest0.test241");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (short) 1);
         ar.edu.unrc.game2048.Cell cell3 = new ar.edu.unrc.game2048.Cell(0);
         boolean boolean5 = cell3.equals((java.lang.Object) 10L);
@@ -11328,9 +11291,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test243() throws Throwable {
+    public void test242() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test243");
+            System.out.format("%n%s%n", "RegressionTest0.test242");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (byte) 0);
         ar.edu.unrc.game2048.Cell cell3 = new ar.edu.unrc.game2048.Cell((int) (short) 0);
         boolean boolean4 = cell3.isEmpty();
@@ -11344,9 +11307,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test244() throws Throwable {
+    public void test243() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test244");
+            System.out.format("%n%s%n", "RegressionTest0.test243");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -11368,9 +11331,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test245() throws Throwable {
+    public void test244() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test245");
+            System.out.format("%n%s%n", "RegressionTest0.test244");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (short) 0);
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -11391,9 +11354,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test246() throws Throwable {
+    public void test245() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test246");
+            System.out.format("%n%s%n", "RegressionTest0.test245");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -11536,9 +11499,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test247() throws Throwable {
+    public void test246() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test247");
+            System.out.format("%n%s%n", "RegressionTest0.test246");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (byte) 0);
         boolean boolean2 = cell1.isEmpty();
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -11593,9 +11556,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test248() throws Throwable {
+    public void test247() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test248");
+            System.out.format("%n%s%n", "RegressionTest0.test247");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean1 = cell0.isEmpty();
         java.lang.String str2 = cell0.toString();
@@ -11607,9 +11570,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test249() throws Throwable {
+    public void test248() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test249");
+            System.out.format("%n%s%n", "RegressionTest0.test248");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -11737,9 +11700,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test250() throws Throwable {
+    public void test249() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test250");
+            System.out.format("%n%s%n", "RegressionTest0.test249");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) ' ');
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -11809,9 +11772,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test251() throws Throwable {
+    public void test250() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test251");
+            System.out.format("%n%s%n", "RegressionTest0.test250");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell(1);
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -11881,9 +11844,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test252() throws Throwable {
+    public void test251() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test252");
+            System.out.format("%n%s%n", "RegressionTest0.test251");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -11964,9 +11927,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test253() throws Throwable {
+    public void test252() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test253");
+            System.out.format("%n%s%n", "RegressionTest0.test252");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -11989,9 +11952,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test254() throws Throwable {
+    public void test253() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test254");
+            System.out.format("%n%s%n", "RegressionTest0.test253");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) ' ');
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean3 = cell1.equals((java.lang.Object) cell2);
@@ -12055,9 +12018,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test255() throws Throwable {
+    public void test254() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test255");
+            System.out.format("%n%s%n", "RegressionTest0.test254");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -12163,9 +12126,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test256() throws Throwable {
+    public void test255() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test256");
+            System.out.format("%n%s%n", "RegressionTest0.test255");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -12202,9 +12165,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test257() throws Throwable {
+    public void test256() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test257");
+            System.out.format("%n%s%n", "RegressionTest0.test256");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -12249,9 +12212,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test258() throws Throwable {
+    public void test257() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test258");
+            System.out.format("%n%s%n", "RegressionTest0.test257");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (short) 0);
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -12373,9 +12336,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test259() throws Throwable {
+    public void test258() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test259");
+            System.out.format("%n%s%n", "RegressionTest0.test258");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -12447,9 +12410,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test260() throws Throwable {
+    public void test259() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test260");
+            System.out.format("%n%s%n", "RegressionTest0.test259");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (short) 0);
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -12497,9 +12460,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test261() throws Throwable {
+    public void test260() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test261");
+            System.out.format("%n%s%n", "RegressionTest0.test260");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (short) 0);
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -12588,9 +12551,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test262() throws Throwable {
+    public void test261() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test262");
+            System.out.format("%n%s%n", "RegressionTest0.test261");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -12648,9 +12611,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test263() throws Throwable {
+    public void test262() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test263");
+            System.out.format("%n%s%n", "RegressionTest0.test262");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (short) 0);
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -12741,9 +12704,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test264() throws Throwable {
+    public void test263() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test264");
+            System.out.format("%n%s%n", "RegressionTest0.test263");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) ' ');
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean3 = cell1.equals((java.lang.Object) cell2);
@@ -12781,9 +12744,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test265() throws Throwable {
+    public void test264() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test265");
+            System.out.format("%n%s%n", "RegressionTest0.test264");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell(0);
         boolean boolean3 = cell1.equals((java.lang.Object) 10L);
         ar.edu.unrc.game2048.Cell cell5 = new ar.edu.unrc.game2048.Cell((int) (byte) 0);
@@ -12841,9 +12804,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test266() throws Throwable {
+    public void test265() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test266");
+            System.out.format("%n%s%n", "RegressionTest0.test265");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -12901,9 +12864,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test267() throws Throwable {
+    public void test266() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test267");
+            System.out.format("%n%s%n", "RegressionTest0.test266");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (byte) 0);
         boolean boolean2 = cell1.isEmpty();
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -12990,9 +12953,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test268() throws Throwable {
+    public void test267() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test268");
+            System.out.format("%n%s%n", "RegressionTest0.test267");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -13027,9 +12990,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test269() throws Throwable {
+    public void test268() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test269");
+            System.out.format("%n%s%n", "RegressionTest0.test268");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (byte) 0);
         boolean boolean2 = cell1.isEmpty();
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -13078,9 +13041,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test270() throws Throwable {
+    public void test269() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test270");
+            System.out.format("%n%s%n", "RegressionTest0.test269");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -13163,9 +13126,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test271() throws Throwable {
+    public void test270() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test271");
+            System.out.format("%n%s%n", "RegressionTest0.test270");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -13231,9 +13194,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test272() throws Throwable {
+    public void test271() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test272");
+            System.out.format("%n%s%n", "RegressionTest0.test271");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -13364,9 +13327,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test273() throws Throwable {
+    public void test272() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test273");
+            System.out.format("%n%s%n", "RegressionTest0.test272");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -13401,9 +13364,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test274() throws Throwable {
+    public void test273() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test274");
+            System.out.format("%n%s%n", "RegressionTest0.test273");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -13455,9 +13418,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test275() throws Throwable {
+    public void test274() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test275");
+            System.out.format("%n%s%n", "RegressionTest0.test274");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (byte) 0);
         ar.edu.unrc.game2048.Cell cell3 = new ar.edu.unrc.game2048.Cell((int) (short) 0);
         boolean boolean4 = cell3.isEmpty();
@@ -13473,9 +13436,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test276() throws Throwable {
+    public void test275() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test276");
+            System.out.format("%n%s%n", "RegressionTest0.test275");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (short) 0);
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -13500,9 +13463,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test277() throws Throwable {
+    public void test276() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test277");
+            System.out.format("%n%s%n", "RegressionTest0.test276");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean1 = cell0.isEmpty();
         java.lang.String str2 = cell0.toString();
@@ -13520,9 +13483,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test278() throws Throwable {
+    public void test277() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test278");
+            System.out.format("%n%s%n", "RegressionTest0.test277");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -13573,9 +13536,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test279() throws Throwable {
+    public void test278() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test279");
+            System.out.format("%n%s%n", "RegressionTest0.test278");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (byte) 0);
         boolean boolean2 = cell1.isEmpty();
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -13647,9 +13610,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test280() throws Throwable {
+    public void test279() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test280");
+            System.out.format("%n%s%n", "RegressionTest0.test279");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (short) 0);
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -13770,9 +13733,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test281() throws Throwable {
+    public void test280() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test281");
+            System.out.format("%n%s%n", "RegressionTest0.test280");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -13829,9 +13792,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test282() throws Throwable {
+    public void test281() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test282");
+            System.out.format("%n%s%n", "RegressionTest0.test281");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -13866,9 +13829,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test283() throws Throwable {
+    public void test282() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test283");
+            System.out.format("%n%s%n", "RegressionTest0.test282");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -13916,9 +13879,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test284() throws Throwable {
+    public void test283() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test284");
+            System.out.format("%n%s%n", "RegressionTest0.test283");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -13943,9 +13906,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test285() throws Throwable {
+    public void test284() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test285");
+            System.out.format("%n%s%n", "RegressionTest0.test284");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (short) 0);
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -14005,9 +13968,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test286() throws Throwable {
+    public void test285() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test286");
+            System.out.format("%n%s%n", "RegressionTest0.test285");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -14089,9 +14052,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test287() throws Throwable {
+    public void test286() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test287");
+            System.out.format("%n%s%n", "RegressionTest0.test286");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         int int1 = cell0.getValue();
         java.lang.String str2 = cell0.toString();
@@ -14120,9 +14083,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test288() throws Throwable {
+    public void test287() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test288");
+            System.out.format("%n%s%n", "RegressionTest0.test287");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -14183,9 +14146,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test289() throws Throwable {
+    public void test288() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test289");
+            System.out.format("%n%s%n", "RegressionTest0.test288");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -14254,9 +14217,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test290() throws Throwable {
+    public void test289() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test290");
+            System.out.format("%n%s%n", "RegressionTest0.test289");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -14283,9 +14246,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test291() throws Throwable {
+    public void test290() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test291");
+            System.out.format("%n%s%n", "RegressionTest0.test290");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (byte) 0);
         int int2 = cell1.getValue();
         java.lang.String str3 = cell1.toString();
@@ -14296,9 +14259,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test292() throws Throwable {
+    public void test291() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test292");
+            System.out.format("%n%s%n", "RegressionTest0.test291");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         int int1 = cell0.getValue();
         java.lang.String str2 = cell0.toString();
@@ -14310,9 +14273,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test293() throws Throwable {
+    public void test292() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test293");
+            System.out.format("%n%s%n", "RegressionTest0.test292");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -14335,9 +14298,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test294() throws Throwable {
+    public void test293() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test294");
+            System.out.format("%n%s%n", "RegressionTest0.test293");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -14392,9 +14355,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test295() throws Throwable {
+    public void test294() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test295");
+            System.out.format("%n%s%n", "RegressionTest0.test294");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -14507,9 +14470,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test296() throws Throwable {
+    public void test295() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test296");
+            System.out.format("%n%s%n", "RegressionTest0.test295");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -14655,9 +14618,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test297() throws Throwable {
+    public void test296() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test297");
+            System.out.format("%n%s%n", "RegressionTest0.test296");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -14742,9 +14705,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test298() throws Throwable {
+    public void test297() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test298");
+            System.out.format("%n%s%n", "RegressionTest0.test297");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (byte) 0);
         int int2 = cell1.getValue();
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -14857,9 +14820,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test299() throws Throwable {
+    public void test298() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test299");
+            System.out.format("%n%s%n", "RegressionTest0.test298");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -14971,9 +14934,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test300() throws Throwable {
+    public void test299() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test300");
+            System.out.format("%n%s%n", "RegressionTest0.test299");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (short) 0);
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -14993,9 +14956,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test301() throws Throwable {
+    public void test300() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test301");
+            System.out.format("%n%s%n", "RegressionTest0.test300");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (short) 0);
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -15060,9 +15023,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test302() throws Throwable {
+    public void test301() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test302");
+            System.out.format("%n%s%n", "RegressionTest0.test301");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -15111,9 +15074,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test303() throws Throwable {
+    public void test302() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test303");
+            System.out.format("%n%s%n", "RegressionTest0.test302");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -15140,9 +15103,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test304() throws Throwable {
+    public void test303() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test304");
+            System.out.format("%n%s%n", "RegressionTest0.test303");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (short) 0);
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -15201,9 +15164,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test305() throws Throwable {
+    public void test304() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test305");
+            System.out.format("%n%s%n", "RegressionTest0.test304");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -15264,9 +15227,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test306() throws Throwable {
+    public void test305() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test306");
+            System.out.format("%n%s%n", "RegressionTest0.test305");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (short) 0);
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -15351,9 +15314,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test307() throws Throwable {
+    public void test306() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test307");
+            System.out.format("%n%s%n", "RegressionTest0.test306");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -15391,9 +15354,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test308() throws Throwable {
+    public void test307() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test308");
+            System.out.format("%n%s%n", "RegressionTest0.test307");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (short) 1);
         ar.edu.unrc.game2048.Cell cell3 = new ar.edu.unrc.game2048.Cell(0);
         boolean boolean5 = cell3.equals((java.lang.Object) 10L);
@@ -15443,9 +15406,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test309() throws Throwable {
+    public void test308() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test309");
+            System.out.format("%n%s%n", "RegressionTest0.test308");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -15501,9 +15464,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test310() throws Throwable {
+    public void test309() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test310");
+            System.out.format("%n%s%n", "RegressionTest0.test309");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (byte) 0);
         boolean boolean2 = cell1.isEmpty();
         int int3 = cell1.getValue();
@@ -15522,9 +15485,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test311() throws Throwable {
+    public void test310() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test311");
+            System.out.format("%n%s%n", "RegressionTest0.test310");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -15675,9 +15638,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test312() throws Throwable {
+    public void test311() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test312");
+            System.out.format("%n%s%n", "RegressionTest0.test311");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell(0);
         boolean boolean3 = cell1.equals((java.lang.Object) 10L);
         ar.edu.unrc.game2048.Cell cell5 = new ar.edu.unrc.game2048.Cell((int) (byte) 0);
@@ -15748,9 +15711,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test313() throws Throwable {
+    public void test312() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test313");
+            System.out.format("%n%s%n", "RegressionTest0.test312");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -15859,9 +15822,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test314() throws Throwable {
+    public void test313() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test314");
+            System.out.format("%n%s%n", "RegressionTest0.test313");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (byte) 0);
         boolean boolean2 = cell1.isEmpty();
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -15905,9 +15868,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test315() throws Throwable {
+    public void test314() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test315");
+            System.out.format("%n%s%n", "RegressionTest0.test314");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (byte) 0);
         boolean boolean2 = cell1.isEmpty();
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -15951,9 +15914,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test316() throws Throwable {
+    public void test315() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test316");
+            System.out.format("%n%s%n", "RegressionTest0.test315");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (byte) 0);
         boolean boolean2 = cell1.isEmpty();
         ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
@@ -15976,9 +15939,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test317() throws Throwable {
+    public void test316() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test317");
+            System.out.format("%n%s%n", "RegressionTest0.test316");
         ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (short) 1);
         ar.edu.unrc.game2048.Cell cell3 = new ar.edu.unrc.game2048.Cell(0);
         boolean boolean5 = cell3.equals((java.lang.Object) 10L);
@@ -16018,9 +15981,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test318() throws Throwable {
+    public void test317() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test318");
+            System.out.format("%n%s%n", "RegressionTest0.test317");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -16059,9 +16022,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test319() throws Throwable {
+    public void test318() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test319");
+            System.out.format("%n%s%n", "RegressionTest0.test318");
         ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
         ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
         boolean boolean2 = cell0.canMergeWith(cell1);
@@ -16106,6 +16069,114 @@ public class RegressionTest0 {
         org.junit.Assert.assertEquals("'" + str23 + "' != '" + "." + "'", str23, ".");
         org.junit.Assert.assertEquals("'" + str24 + "' != '" + "." + "'", str24, ".");
         org.junit.Assert.assertTrue("'" + boolean25 + "' != '" + true + "'", boolean25 == true);
+    }
+
+    @Test
+    public void test319() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test319");
+        ar.edu.unrc.game2048.Cell cell0 = ar.edu.unrc.game2048.Cell.EMPTY;
+        ar.edu.unrc.game2048.Cell cell1 = ar.edu.unrc.game2048.Cell.EMPTY;
+        ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
+        boolean boolean3 = cell1.canMergeWith(cell2);
+        java.lang.String str4 = cell2.toString();
+        boolean boolean5 = cell2.isEmpty();
+        boolean boolean6 = cell0.canMergeWith(cell2);
+        java.lang.String str7 = cell2.toString();
+        org.junit.Assert.assertNotNull(cell0);
+        org.junit.Assert.assertNotNull(cell1);
+        org.junit.Assert.assertNotNull(cell2);
+        org.junit.Assert.assertTrue("'" + boolean3 + "' != '" + false + "'", boolean3 == false);
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "." + "'", str4, ".");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + true + "'", boolean5 == true);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "." + "'", str7, ".");
+    }
+
+    @Test
+    public void test320() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test320");
+        ar.edu.unrc.game2048.Cell cell1 = new ar.edu.unrc.game2048.Cell((int) (short) 0);
+        ar.edu.unrc.game2048.Cell cell2 = ar.edu.unrc.game2048.Cell.EMPTY;
+        ar.edu.unrc.game2048.Cell cell3 = ar.edu.unrc.game2048.Cell.EMPTY;
+        boolean boolean4 = cell2.canMergeWith(cell3);
+        boolean boolean5 = cell1.canMergeWith(cell2);
+        boolean boolean7 = cell1.equals((java.lang.Object) (short) 10);
+        ar.edu.unrc.game2048.Cell cell8 = ar.edu.unrc.game2048.Cell.EMPTY;
+        ar.edu.unrc.game2048.Cell cell9 = ar.edu.unrc.game2048.Cell.EMPTY;
+        boolean boolean10 = cell8.canMergeWith(cell9);
+        java.lang.Object obj11 = null;
+        boolean boolean12 = cell9.equals(obj11);
+        java.lang.String str13 = cell9.toString();
+        boolean boolean15 = cell9.equals((java.lang.Object) (byte) 100);
+        ar.edu.unrc.game2048.Cell cell16 = ar.edu.unrc.game2048.Cell.EMPTY;
+        ar.edu.unrc.game2048.Cell cell17 = ar.edu.unrc.game2048.Cell.EMPTY;
+        boolean boolean18 = cell16.canMergeWith(cell17);
+        java.lang.Object obj19 = null;
+        boolean boolean20 = cell17.equals(obj19);
+        ar.edu.unrc.game2048.Cell cell22 = new ar.edu.unrc.game2048.Cell((int) (byte) 0);
+        boolean boolean23 = cell22.isEmpty();
+        boolean boolean24 = cell17.canMergeWith(cell22);
+        boolean boolean25 = cell9.canMergeWith(cell22);
+        boolean boolean26 = cell1.canMergeWith(cell9);
+        ar.edu.unrc.game2048.Cell cell27 = ar.edu.unrc.game2048.Cell.EMPTY;
+        ar.edu.unrc.game2048.Cell cell28 = ar.edu.unrc.game2048.Cell.EMPTY;
+        boolean boolean29 = cell27.canMergeWith(cell28);
+        int int30 = cell28.getValue();
+        boolean boolean31 = cell28.isEmpty();
+        boolean boolean32 = cell28.isEmpty();
+        ar.edu.unrc.game2048.Cell cell34 = new ar.edu.unrc.game2048.Cell((int) (byte) 0);
+        boolean boolean35 = cell34.isEmpty();
+        ar.edu.unrc.game2048.Cell cell36 = ar.edu.unrc.game2048.Cell.EMPTY;
+        ar.edu.unrc.game2048.Cell cell37 = ar.edu.unrc.game2048.Cell.EMPTY;
+        boolean boolean38 = cell36.canMergeWith(cell37);
+        int int39 = cell37.getValue();
+        boolean boolean40 = cell37.isEmpty();
+        boolean boolean41 = cell34.equals((java.lang.Object) cell37);
+        boolean boolean42 = cell28.canMergeWith(cell34);
+        java.lang.String str43 = cell28.toString();
+        // The following exception was thrown during execution in test generation
+        try {
+            ar.edu.unrc.game2048.Cell cell44 = cell1.mergeWith(cell28);
+            org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException; message: Cannot merge cells: . and .");
+        } catch (java.lang.IllegalArgumentException e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(cell2);
+        org.junit.Assert.assertNotNull(cell3);
+        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + false + "'", boolean4 == false);
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertNotNull(cell8);
+        org.junit.Assert.assertNotNull(cell9);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "." + "'", str13, ".");
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertNotNull(cell16);
+        org.junit.Assert.assertNotNull(cell17);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + false + "'", boolean20 == false);
+        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + true + "'", boolean23 == true);
+        org.junit.Assert.assertTrue("'" + boolean24 + "' != '" + false + "'", boolean24 == false);
+        org.junit.Assert.assertTrue("'" + boolean25 + "' != '" + false + "'", boolean25 == false);
+        org.junit.Assert.assertTrue("'" + boolean26 + "' != '" + false + "'", boolean26 == false);
+        org.junit.Assert.assertNotNull(cell27);
+        org.junit.Assert.assertNotNull(cell28);
+        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + false + "'", boolean29 == false);
+        org.junit.Assert.assertTrue("'" + int30 + "' != '" + 0 + "'", int30 == 0);
+        org.junit.Assert.assertTrue("'" + boolean31 + "' != '" + true + "'", boolean31 == true);
+        org.junit.Assert.assertTrue("'" + boolean32 + "' != '" + true + "'", boolean32 == true);
+        org.junit.Assert.assertTrue("'" + boolean35 + "' != '" + true + "'", boolean35 == true);
+        org.junit.Assert.assertNotNull(cell36);
+        org.junit.Assert.assertNotNull(cell37);
+        org.junit.Assert.assertTrue("'" + boolean38 + "' != '" + false + "'", boolean38 == false);
+        org.junit.Assert.assertTrue("'" + int39 + "' != '" + 0 + "'", int39 == 0);
+        org.junit.Assert.assertTrue("'" + boolean40 + "' != '" + true + "'", boolean40 == true);
+        org.junit.Assert.assertTrue("'" + boolean41 + "' != '" + true + "'", boolean41 == true);
+        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + false + "'", boolean42 == false);
+        org.junit.Assert.assertEquals("'" + str43 + "' != '" + "." + "'", str43, ".");
     }
 }
 
