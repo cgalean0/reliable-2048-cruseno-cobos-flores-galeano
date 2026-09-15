@@ -51,6 +51,8 @@ public class Board {
      */
     public Board() {
         this(DEFAULT_SIZE, new GenerateRandomCellStrategy());
+
+        assert repOk();
     }
 
     /**
@@ -61,19 +63,23 @@ public class Board {
      */
     public Board(int size) {
         this(size, new GenerateRandomCellStrategy());
+
+        assert repOk();
     }
 
     public Board(int size, GenerateCellStrategy str) {
-            if (size <= 0) {
-                throw new IllegalArgumentException("Board size must be positive: " + size);
-            }
-            this.size = size;
-            this.grid = new Cell[size][size];
-            this.score = 0;
-            this.str = str;
-            initializeEmpty();
-            str.addTile(this);
-            str.addTile(this);
+        if (size <= 0) {
+            throw new IllegalArgumentException("Board size must be positive: " + size);
+        }
+        this.size = size;
+        this.grid = new Cell[size][size];
+        this.score = 0;
+        this.str = str;
+        initializeEmpty();
+        str.addTile(this);
+        str.addTile(this);
+
+        assert repOk();    
     }
 
     /**
@@ -85,11 +91,13 @@ public class Board {
         this.size = other.size;
         this.grid = new Cell[size][size];
         this.score = other.score;
+        this.str = other.str;
         for (int r = 0; r < size; r++) {
             for (int c = 0; c < size; c++) {
                 this.grid[r][c] = other.grid[r][c];
             }
         }
+        assert repOk();
     }
 
     /**
@@ -149,6 +157,8 @@ public class Board {
             throw new IllegalArgumentException("Cell cannot be null");
         }
         grid[row][col] = cell;
+
+        assert repOk();
     }
 
     /**
@@ -287,6 +297,8 @@ public class Board {
         if (moved) {
             str.addTile(this); // Add new random tile after successful move
         }
+        assert repOk();
+
         return moved;
     }
 
@@ -327,6 +339,8 @@ public class Board {
         if (moved) {
             str.addTile(this); // Add new random tile after successful move
         }
+        assert repOk();
+
         return moved;
     }
 
@@ -367,6 +381,8 @@ public class Board {
         if (moved) {
             str.addTile(this); // Add new random tile after successful move
         }
+        assert repOk();
+
         return moved;
     }
 
@@ -407,6 +423,8 @@ public class Board {
         if (moved) {
             str.addTile(this); // Add new random tile after successful move
         }
+        assert repOk();
+
         return moved;
     }
 
@@ -541,5 +559,37 @@ public class Board {
         public String toString() {
             return "(" + row + ", " + col + ")";
         }
+    }
+
+    /**
+     * Validates the representation invariant of the Board class.
+     * 
+     * @return true if the internal state is consistent; false otherwise
+     */
+    public boolean repOk(){
+        if(size <= 0)
+            return false;
+
+        if(score < 0)
+            return false;
+
+        if(str == null)
+            return false;
+
+        if(grid == null || grid.length != size)
+            return false;
+
+        for(int i = 0; i < size; i++){
+            if(grid[i] == null || grid[i].length != size)
+                return false;
+
+            for(int j = 0; j < size; j++){
+                if(grid[i][j] == null){
+                    return false;
+                }
+            }
+        }
+
+        return true;
     }
 }
