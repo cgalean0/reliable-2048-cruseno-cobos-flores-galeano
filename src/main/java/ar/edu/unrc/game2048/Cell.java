@@ -38,6 +38,7 @@ public final class Cell {
             throw new IllegalArgumentException("Cell value must be zero or a power of two: " + value);
         }
         this.value = value;
+        assert repOK();
     }
 
     /**
@@ -88,6 +89,7 @@ public final class Cell {
                 "Cannot merge cells: " + this + " and " + other
             );
         }
+        assert repOK();
         return new Cell(this.value * 2);
     }
 
@@ -126,5 +128,17 @@ public final class Cell {
     @Override
     public String toString() {
         return value == 0 ? "." : String.valueOf(value);
+    }
+
+    public boolean repOK() {
+      // El valor no puede ser negativo.
+      if (this.value < 0) {
+        return false;
+      }
+      // El valor de la celda debe ser 0 o potencia de dos.
+      if (this.value != 0 && ((this.value & (this.value - 1)) != 0)) {
+        return false;
+      }
+      return true;
     }
 }
