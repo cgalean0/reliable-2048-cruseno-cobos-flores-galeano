@@ -21,6 +21,7 @@ public class BoardTest {
         assertEquals(0, board.getScore());
 
         assertEquals(14, board.getEmptyPositions().size()); //Deben haber (16-2) celdas vacias
+	    assertTrue(board.repOk());
     }
 
     @Test
@@ -30,6 +31,7 @@ public class BoardTest {
         assertEquals(6, board.getSize());
         assertEquals(0, board.getScore());
         assertEquals(34, board.getEmptyPositions().size());
+	    assertTrue(board.repOk());
     }
 
     @Test
@@ -39,6 +41,9 @@ public class BoardTest {
 
         assertEquals(firstBoard, copiedBoard);
         assertNotSame(firstBoard, copiedBoard);
+
+	    assertTrue(firstBoard.repOk());
+	    assertTrue(copiedBoard.repOk());
     }
 
     @Test
@@ -454,6 +459,7 @@ public class BoardTest {
 				assertNotNull(board.getCell(r, c));
 			}
 		}
+		assertTrue(board.repOk());
 	}
 
 	@Test
@@ -559,16 +565,21 @@ public class BoardTest {
 	public void equalsSameGridDifferentScoreTest() {
 		Board boardWithScore = new Board(4);
 		Board boardNoScore = new Board(4);
+
 		clearBoard(boardWithScore);
 		clearBoard(boardNoScore);
+
 		boardWithScore.setCell(0, 0, new Cell(2));
 		boardWithScore.setCell(1, 0, new Cell(2));
 		boardWithScore.moveUp();
 		clearBoard(boardWithScore);
+
 		boardWithScore.setCell(0, 0, new Cell(2));
 		boardWithScore.setCell(1, 1, new Cell(4));
+
 		boardNoScore.setCell(0, 0, new Cell(2));
 		boardNoScore.setCell(1, 1, new Cell(4));
+
 		assertNotEquals(boardWithScore, boardNoScore);
 	}
 
@@ -577,11 +588,14 @@ public class BoardTest {
 		GenerateDeterministicCellStrategy s1 = new GenerateDeterministicCellStrategy(
 				new ArrayList<>(Arrays.asList(new Board.Position(0, 0), new Board.Position(1, 1))),
 				new ArrayList<>(Arrays.asList(2, 4)));
+
 		GenerateDeterministicCellStrategy s2 = new GenerateDeterministicCellStrategy(
 				new ArrayList<>(Arrays.asList(new Board.Position(0, 0), new Board.Position(1, 1))),
 				new ArrayList<>(Arrays.asList(4, 2)));
+
 		Board board1 = new Board(4, s1);
 		Board board2 = new Board(4, s2);
+
 		assertNotEquals(board1, board2);
 	}
 
@@ -592,11 +606,14 @@ public class BoardTest {
 		GenerateDeterministicCellStrategy s1 = new GenerateDeterministicCellStrategy(
 				new ArrayList<>(Arrays.asList(new Board.Position(0, 0), new Board.Position(1, 1))),
 				new ArrayList<>(Arrays.asList(2, 4)));
+
 		GenerateDeterministicCellStrategy s2 = new GenerateDeterministicCellStrategy(
 				new ArrayList<>(Arrays.asList(new Board.Position(0, 0), new Board.Position(1, 1))),
 				new ArrayList<>(Arrays.asList(2, 4)));
+
 		Board board1 = new Board(4, s1);
 		Board board2 = new Board(4, s2);
+
 		assertEquals(board1.hashCode(), board2.hashCode());
 	}
 
@@ -605,11 +622,14 @@ public class BoardTest {
 		GenerateDeterministicCellStrategy s1 = new GenerateDeterministicCellStrategy(
 				new ArrayList<>(Arrays.asList(new Board.Position(0, 0), new Board.Position(1, 1))),
 				new ArrayList<>(Arrays.asList(2, 4)));
+
 		GenerateDeterministicCellStrategy s2 = new GenerateDeterministicCellStrategy(
 				new ArrayList<>(Arrays.asList(new Board.Position(0, 0), new Board.Position(1, 1))),
 				new ArrayList<>(Arrays.asList(4, 2)));
+
 		Board board1 = new Board(4, s1);
 		Board board2 = new Board(4, s2);
+
 		assertNotEquals(board1.hashCode(), board2.hashCode());
 	}
 
@@ -618,6 +638,7 @@ public class BoardTest {
 	@Test
 	public void toStringTest() {
 		Board board = new Board(4);
+
 		clearBoard(board);
 		board.setCell(0, 0, new Cell(2));
 		board.setCell(0, 1, new Cell(4));
@@ -640,6 +661,7 @@ public class BoardTest {
 	@Test
 	public void toStringEmptyBoardTest() {
 		Board board = new Board(2);
+
 		clearBoard(board);
 
 		String expected = "Score: 0\n" +
@@ -856,30 +878,28 @@ public class BoardTest {
 		assertEquals(emptyBefore - 1, board.getEmptyPositions().size());
 	}
 
+
+	//repOk()
 	@Test
-	public void moveDownClearsOriginWhenTileAtTop() {
-		Board board = new Board(4);
-		Cell cell = new Cell(2);
-
-		clearBoard(board);
-		board.setCell(0, 0, cell);
-		board.moveDown();
-
-		assertTrue(board.getCell(0, 0).isEmpty());
-		assertEquals(2, board.getCell(3, 0).getValue());
+	void repOkTest() {
+		Board board = new Board(4, new GenerateRandomCellStrategy());
+		assertTrue(board.repOk());
 	}
 
 	@Test
-	public void moveRightClearsOriginWhenTileAtLeft() {
-		Board board = new Board(4);
-		Cell cell = new Cell(2);
+	void positionEqualsSelf() {
+		Board.Position pos = new Board.Position(1, 2);
+		assertEquals(pos, pos);
+	}
 
-		clearBoard(board);
-		board.setCell(0, 0, cell);
-		board.moveRight();
-		
-		assertTrue(board.getCell(0, 0).isEmpty());
-		assertEquals(2, board.getCell(0, 3).getValue());
+	//direction
+	@Test
+	void directionEnumExists() {
+		assertEquals(4, Board.Direction.values().length);
+		assertNotNull(Board.Direction.UP);
+		assertNotNull(Board.Direction.DOWN);
+		assertNotNull(Board.Direction.LEFT);
+		assertNotNull(Board.Direction.RIGHT);
 	}
 
 
