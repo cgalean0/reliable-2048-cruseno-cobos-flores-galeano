@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.List;
+
 
 import org.junit.jupiter.api.Test;
 
@@ -862,6 +864,24 @@ public class BoardTest {
 		assertFalse(board.isLosingBoard());
 	}
 
+	    @Test
+    public void isFullTrueTest() {
+        Board board = new Board();
+        for (int r = 0; r < board.getSize(); r++) {
+            for (int c = 0; c < board.getSize(); c++) {
+                board.setCell(r, c, new Cell(2));
+            }
+        }
+        assertTrue(board.isFull());
+    }
+
+    @Test
+    public void isWinningBoardReturnsTrueWithWinningValue() {
+        Board board = new Board();
+        board.setCell(0, 0, new Cell(2048));
+        assertTrue(board.isWinningBoard());
+    }
+
 	//Moves
 
 	@Test
@@ -877,6 +897,66 @@ public class BoardTest {
 		assertTrue(moved);
 		assertEquals(emptyBefore - 1, board.getEmptyPositions().size());
 	}
+
+	    @Test
+    public void moveUpDoesNotChangeBoardWhenAllTilesAreAtTop() {
+        List<Board.Position> positions = new ArrayList<>();
+        List<Integer> values = new ArrayList<>();
+        positions.add(new Board.Position(0, 0)); values.add(2);
+        positions.add(new Board.Position(0, 1)); values.add(4);
+        positions.add(new Board.Position(0, 2)); values.add(8);
+        positions.add(new Board.Position(0, 3)); values.add(16);
+
+        GenerateCellStrategy strategy = new GenerateDeterministicCellStrategy(positions, values);
+        Board board = new Board(4, strategy);
+
+        assertFalse(board.moveUp());
+    }
+
+    @Test
+    public void moveDownDoesNotChangeBoardWhenAllTilesAreAtBottom() {
+        List<Board.Position> positions = new ArrayList<>();
+        List<Integer> values = new ArrayList<>();
+        positions.add(new Board.Position(3, 0)); values.add(2);
+        positions.add(new Board.Position(3, 1)); values.add(4);
+        positions.add(new Board.Position(3, 2)); values.add(8);
+        positions.add(new Board.Position(3, 3)); values.add(16);
+
+        GenerateCellStrategy strategy = new GenerateDeterministicCellStrategy(positions, values);
+        Board board = new Board(4, strategy);
+
+        assertFalse(board.moveDown());
+    }
+
+    @Test
+    public void moveLeftDoesNotChangeBoardWhenAllTilesAreAtLeft() {
+        List<Board.Position> positions = new ArrayList<>();
+        List<Integer> values = new ArrayList<>();
+        positions.add(new Board.Position(0, 0)); values.add(2);
+        positions.add(new Board.Position(1, 0)); values.add(4);
+        positions.add(new Board.Position(2, 0)); values.add(8);
+        positions.add(new Board.Position(3, 0)); values.add(16);
+
+        GenerateCellStrategy strategy = new GenerateDeterministicCellStrategy(positions, values);
+        Board board = new Board(4, strategy);
+
+        assertFalse(board.moveLeft());
+    }
+
+    @Test
+    public void moveRightDoesNotChangeBoardWhenAllTilesAreAtRight() {
+        List<Board.Position> positions = new ArrayList<>();
+        List<Integer> values = new ArrayList<>();
+        positions.add(new Board.Position(0, 3)); values.add(2);
+        positions.add(new Board.Position(1, 3)); values.add(4);
+        positions.add(new Board.Position(2, 3)); values.add(8);
+        positions.add(new Board.Position(3, 3)); values.add(16);
+
+        GenerateCellStrategy strategy = new GenerateDeterministicCellStrategy(positions, values);
+        Board board = new Board(4, strategy);
+
+        assertFalse(board.moveRight());
+    }
 
 
 	//repOk()
