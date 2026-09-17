@@ -595,6 +595,49 @@ public class BoardTest {
 		assertNotEquals(board1, board2);
 	}
 
+	@Test
+	public void deterministicStrategyResetOnConstruction() {
+		int[] values = {0, 1, 2, 0, 0};
+		GenerateDeterministicCellStrategy s = new GenerateDeterministicCellStrategy(values);
+		Board b1 = new Board(4, s);
+		Board b2 = new Board(4, s);
+		assertEquals(b1, b2);
+	}
+
+	@Test
+	public void copyDeterministicBoardTest() {
+		int[] values = {0,0,2, 0,1,2};
+		GenerateDeterministicCellStrategy strategy = new GenerateDeterministicCellStrategy(values);
+
+		Board board1 = new Board(4, strategy);
+		Board board2 = new Board(board1);
+
+		assertEquals(board1, board2);
+	}
+
+	@Test
+	public void moveUpSkipsNonMergingTiles() {
+		int[] values = {0,0,2, 0,1,2, 2,2,2};
+		GenerateDeterministicCellStrategy strategy = new GenerateDeterministicCellStrategy(values);
+		Board board = new Board(4, strategy);
+
+		clearBoard(board);
+		board.setCell(0, 0, new Cell(2));
+		board.setCell(1, 0, new Cell(4));
+		board.moveUp();
+
+		assertEquals(2, board.getCell(0, 0).getValue());
+		assertEquals(4, board.getCell(1, 0).getValue());
+		assertEquals(14, board.getEmptyPositions().size());
+		assertEquals(0, board.getScore());
+	}
+
+	@Test
+	public void positionEqualsDifferentTypeTest() {
+		Board.Position position = new Board.Position(0, 0);
+		assertNotEquals("(0,0)", position);
+	}
+
 	//HASH CODE
 
 	@Test
@@ -881,12 +924,100 @@ public class BoardTest {
 		clearBoard(board);
 		board.setCell(3, 0, cell);
 		int emptyBefore = board.getEmptyPositions().size();
-		boolean moved = board.moveUp();
 
-		assertTrue(moved);
+		assertTrue(board.moveUp());
 		assertEquals(emptyBefore - 1, board.getEmptyPositions().size());
 	}
 
+	@Test
+	public void moveDownAddsRandomTile() {
+		Board board = new Board(4);
+		Cell cell = new Cell(2);
+
+		clearBoard(board);
+		board.setCell(0, 1, cell);
+		int emptyBefore = board.getEmptyPositions().size();
+
+		assertTrue(board.moveDown());
+		assertEquals(2, board.getCell(3, 1).getValue());
+		assertEquals(emptyBefore - 1, board.getEmptyPositions().size());
+	}
+
+	@Test
+	public void moveLeftAddsRandomTile() {
+		Board board = new Board(4);
+		Cell cell = new Cell(2);
+
+		clearBoard(board);
+		board.setCell(1, 3, cell);
+		int emptyBefore = board.getEmptyPositions().size();
+
+		assertTrue(board.moveLeft());
+		assertEquals(2, board.getCell(1, 0).getValue());
+		assertEquals(emptyBefore - 1, board.getEmptyPositions().size());
+	}
+
+	@Test
+	public void moveRightAddsRandomTile() {
+		Board board = new Board(4);
+		Cell cell = new Cell(2);
+
+		clearBoard(board);
+		board.setCell(1, 0, cell);
+		int emptyBefore = board.getEmptyPositions().size();
+
+		assertTrue(board.moveRight());
+		assertEquals(2, board.getCell(1, 3).getValue());
+		assertEquals(emptyBefore - 1, board.getEmptyPositions().size());
+	}
+
+	@Test
+	public void moveUpOnEmptyBoard() {
+		Board board = new Board(4);
+
+		clearBoard(board);
+		int emptyBefore = board.getEmptyPositions().size();
+
+		assertFalse(board.moveUp());
+		assertEquals(emptyBefore, board.getEmptyPositions().size());
+		assertEquals(0, board.getScore());
+	}
+
+	@Test
+	public void moveDownOnEmptyBoard() {
+		Board board = new Board(4);
+
+		clearBoard(board);
+		int emptyBefore = board.getEmptyPositions().size();
+
+		assertFalse(board.moveDown());
+		assertEquals(emptyBefore, board.getEmptyPositions().size());
+		assertEquals(0, board.getScore());
+	}
+
+	@Test
+	public void moveLeftOnEmptyBoard() {
+		Board board = new Board(4);
+
+		clearBoard(board);
+		int emptyBefore = board.getEmptyPositions().size();
+
+		assertFalse(board.moveLeft());
+		assertEquals(emptyBefore, board.getEmptyPositions().size());
+		assertEquals(0, board.getScore());
+	}
+
+	@Test
+	public void moveRightOnEmptyBoard() {
+		Board board = new Board(4);
+
+		clearBoard(board);
+		int emptyBefore = board.getEmptyPositions().size();
+
+		assertFalse(board.moveRight());
+		assertEquals(emptyBefore, board.getEmptyPositions().size());
+		assertEquals(0, board.getScore());
+	}
 
 	//repOk()
 	@Test
