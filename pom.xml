@@ -70,6 +70,8 @@
                     </targetClasses>
                     <excludedClasses>
                         <param>ar.edu.unrc.game2048.MainCLI</param>
+                        <param>ar.edu.unrc.game2048.GenerateDeterministicCellStrategy</param>
+                        <param>ar.edu.unrc.game2048.GenerateRandomCellStrategy</param>
                     </excludedClasses>
                     <targetTests>
                         <param>ar.edu.unrc.game2048.*Test</param>
