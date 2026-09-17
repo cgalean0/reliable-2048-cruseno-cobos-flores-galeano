@@ -549,19 +549,17 @@ public class BoardTest {
 		Board boardOf3 = new Board(3);
 		assertNotEquals(boardOf4, boardOf3);
 	}
-/*
+
 	@Test
 	public void equalsIdenticalBoardsTest() {
-		GenerateDeterministicCellStrategy s1 = new GenerateDeterministicCellStrategy(
-				new ArrayList<>(Arrays.asList(new Board.Position(0, 0), new Board.Position(1, 1))),
-				new ArrayList<>(Arrays.asList(2, 4)));
-		GenerateDeterministicCellStrategy s2 = new GenerateDeterministicCellStrategy(
-				new ArrayList<>(Arrays.asList(new Board.Position(0, 0), new Board.Position(1, 1))),
-				new ArrayList<>(Arrays.asList(2, 4)));
+		int[] values1 = {0,0,2};
+		int[] values2 = {0,0,2};
+		GenerateDeterministicCellStrategy s1 = new GenerateDeterministicCellStrategy(values1);
+		GenerateDeterministicCellStrategy s2 = new GenerateDeterministicCellStrategy(values2);
 		Board board1 = new Board(4, s1);
 		Board board2 = new Board(4, s2);
 		assertEquals(board1, board2);
-	}*/
+	}
 
 	@Test
 	public void equalsSameGridDifferentScoreTest() {
@@ -584,17 +582,13 @@ public class BoardTest {
 
 		assertNotEquals(boardWithScore, boardNoScore);
 	}
-/*
 	@Test
 	public void equalsDifferentGridSameSizeTest() {
-		GenerateDeterministicCellStrategy s1 = new GenerateDeterministicCellStrategy(
-				new ArrayList<>(Arrays.asList(new Board.Position(0, 0), new Board.Position(1, 1))),
-				new ArrayList<>(Arrays.asList(2, 4)));
+		int[] values1 = {0,0,2};
+		int[] values2 = {3,3,8};
 
-		GenerateDeterministicCellStrategy s2 = new GenerateDeterministicCellStrategy(
-				new ArrayList<>(Arrays.asList(new Board.Position(0, 0), new Board.Position(1, 1))),
-				new ArrayList<>(Arrays.asList(4, 2)));
-
+		GenerateDeterministicCellStrategy s1 = new GenerateDeterministicCellStrategy(values1);
+		GenerateDeterministicCellStrategy s2 = new GenerateDeterministicCellStrategy(values2);
 		Board board1 = new Board(4, s1);
 		Board board2 = new Board(4, s2);
 
@@ -605,14 +599,11 @@ public class BoardTest {
 
 	@Test
 	public void hashCodeEqualBoardsTest() {
-		GenerateDeterministicCellStrategy s1 = new GenerateDeterministicCellStrategy(
-				new ArrayList<>(Arrays.asList(new Board.Position(0, 0), new Board.Position(1, 1))),
-				new ArrayList<>(Arrays.asList(2, 4)));
+		int[] values1 = {1,1,2};
+		int[] values2 = {1,1,2};
 
-		GenerateDeterministicCellStrategy s2 = new GenerateDeterministicCellStrategy(
-				new ArrayList<>(Arrays.asList(new Board.Position(0, 0), new Board.Position(1, 1))),
-				new ArrayList<>(Arrays.asList(2, 4)));
-
+		GenerateDeterministicCellStrategy s1 = new GenerateDeterministicCellStrategy(values1);
+		GenerateDeterministicCellStrategy s2 = new GenerateDeterministicCellStrategy(values2);
 		Board board1 = new Board(4, s1);
 		Board board2 = new Board(4, s2);
 
@@ -621,19 +612,17 @@ public class BoardTest {
 
 	@Test
 	public void hashCodeDifferentBoardsTest() {
-		GenerateDeterministicCellStrategy s1 = new GenerateDeterministicCellStrategy(
-				new ArrayList<>(Arrays.asList(new Board.Position(0, 0), new Board.Position(1, 1))),
-				new ArrayList<>(Arrays.asList(2, 4)));
+		int[] values1 = {0,1,2};
+		int[] values2 = {1,0,4};
 
-		GenerateDeterministicCellStrategy s2 = new GenerateDeterministicCellStrategy(
-				new ArrayList<>(Arrays.asList(new Board.Position(0, 0), new Board.Position(1, 1))),
-				new ArrayList<>(Arrays.asList(4, 2)));
-
+		GenerateDeterministicCellStrategy s1 = new GenerateDeterministicCellStrategy(values1);
+		GenerateDeterministicCellStrategy s2 = new GenerateDeterministicCellStrategy(values2);
 		Board board1 = new Board(4, s1);
 		Board board2 = new Board(4, s2);
 
 		assertNotEquals(board1.hashCode(), board2.hashCode());
-	}*/
+	}
+
 
 	//TO STRING
 
@@ -722,19 +711,19 @@ public class BoardTest {
 	}
 
 	//TILE GENERATION STRATEGIES
-/*
+
 	@Test
 	public void deterministicStrategyBoardTest() {
-		GenerateDeterministicCellStrategy strategy = new GenerateDeterministicCellStrategy(
-				new ArrayList<>(Arrays.asList(new Board.Position(0, 0), new Board.Position(2, 3))),
-				new ArrayList<>(Arrays.asList(2, 4)));
+		int[] values = {2,3,4,0,0,2};
+
+		GenerateDeterministicCellStrategy strategy = new GenerateDeterministicCellStrategy(values);
 		Board board = new Board(4, strategy);
 
 		assertEquals(2, board.getCell(0, 0).getValue());
 		assertEquals(4, board.getCell(2, 3).getValue());
 		assertEquals(14, board.getEmptyPositions().size());
 	}
-*/
+
 	@Test
 	public void addRandomTileTest() {
 		Board board = new Board(4);
