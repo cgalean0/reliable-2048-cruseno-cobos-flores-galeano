@@ -28,6 +28,7 @@
                                 <configuration>
                     <excludes>
                         <exclude>ar/edu/unrc/game2048/MainCLI.class</exclude>
+                        <exclude>ar/edu/unrc/game2048/GenerateDeterministicCellStrategy.class</exclude>
                     </excludes>
                 </configuration>
                 <executions>

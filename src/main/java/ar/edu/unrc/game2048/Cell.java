@@ -130,6 +130,7 @@ public final class Cell {
         return value == 0 ? "." : String.valueOf(value);
     }
 
+    //@CheckRep
     public boolean repOK() {
       // El valor no puede ser negativo.
       if (this.value < 0) {

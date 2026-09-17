@@ -50,8 +50,7 @@ public class Board {
      * Creates a new board of the default size (4x4) with two random tiles.
      */
     public Board() {
-        this(DEFAULT_SIZE, new GenerateRandomCellStrategy());
-
+        this(DEFAULT_SIZE);
         assert repOk();
     }
 
@@ -75,11 +74,16 @@ public class Board {
         this.grid = new Cell[size][size];
         this.score = 0;
         this.str = str;
+
+        if (str instanceof GenerateDeterministicCellStrategy) {
+            ((GenerateDeterministicCellStrategy) str).reset();
+        }
+
         initializeEmpty();
         str.addTile(this);
         str.addTile(this);
 
-        assert repOk();    
+        assert repOk();
     }
 
     /**
@@ -92,6 +96,9 @@ public class Board {
         this.grid = new Cell[size][size];
         this.score = other.score;
         this.str = other.str;
+        if (str instanceof GenerateDeterministicCellStrategy) {
+            ((GenerateDeterministicCellStrategy) str).reset();
+        }
         for (int r = 0; r < size; r++) {
             for (int c = 0; c < size; c++) {
                 this.grid[r][c] = other.grid[r][c];
@@ -563,9 +570,10 @@ public class Board {
 
     /**
      * Validates the representation invariant of the Board class.
-     * 
+     *
      * @return true if the internal state is consistent; false otherwise
      */
+     //@CheckRep
     public boolean repOk(){
         if(size <= 0)
             return false;

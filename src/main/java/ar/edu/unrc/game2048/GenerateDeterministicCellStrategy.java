@@ -10,19 +10,30 @@ import ar.edu.unrc.game2048.Board.Position;
  */
 public class GenerateDeterministicCellStrategy implements GenerateCellStrategy{
 
-    private List<Board.Position> pos;
-    private List<Integer> values;
+    private int[] values;
+    private int count = 0;
 
-    public GenerateDeterministicCellStrategy(List<Board.Position> pos, List<Integer> values) {
-        this.pos = pos;
+    public GenerateDeterministicCellStrategy(int[] values) {
         this.values = values;
     }
 
     public void addTile(Board board) {
-        Position p = pos.get(0);
-        Integer v = values.get(0);
-        pos.remove(0);
-        values.remove(0);
-        board.setCell(p.row, p.col, new Cell(v));
+        int row = nextInt();
+        int col = nextInt();
+        Integer value = nextInt();
+        if (row < 0 || row >= board.getSize() || col < 0 || col >= board.getSize()) {
+                throw new IllegalStateException(
+                    "Deterministic strategy produced invalid position: (" + row + "," + col + ")"
+            );
+        }
+        board.setCell(row, col, new Cell(value));
+    }
+
+    public void reset() {
+        this.count = 0;
+    }
+
+    private int nextInt() {
+        return values[count++ % values.length];
     }
 }
