@@ -42,55 +42,22 @@ Al correr la siguiente herramienta nos encontramos con las siguientes métricas 
 
 ## Nuevas métricas (Fase 3: Randoop + repOK)
 
-A continuación se proveen las métricas luego de haber aplicado las técnicas más apropiadas para testear cada parte del proyecto.
+A continuación se proveen las métricas luego de haber aplicado técnicas más apropiadas para testear cada parte del proyecto.
 
-### Cobertura JaCoCo (Fase 3)
+### Cobertura con JaCoCo
 
-- Branch coverage general: 82%
-- Branch coverage Board: 82%
-- Branch coverage Cell: 88%
+Luego de haber mejorado la test suite gracias a correr la herramienta
+randoop logramos mejorar tanto la cobertura de los test como el
+strength de los mismos.
+
+![Nueva cobertura JaCoCo](./assets/2026-09-17-204623_screenshot.png)
+![Nueva cobertura JaCoCo](./assets/2026-09-17-204637_screenshot.png)
 
 > `MainCLI` fue excluido del análisis de cobertura por tratarse de la interfaz de línea de comandos, sin tests.
 
-### Análisis de mutación PITest (Fase 3)
+### Análisis de mutación PITest
 
-- Line coverage: 92% (231/252)
-- Mutation score: 80% (184/229)
-- Test strength: 92%
-- Tests ejecutados: 2058
+Además del análisis de cobertura también volvimos a correr PITest
+y el resultado nos muestra como mejoró la cobertura de mutation test.
 
-### Comparación con baseline (Fase 1)
-
-- Branch coverage: 74% → 82% (+8 puntos)
-- Mutation score: 61% → 80% (+19 puntos)
-- Test strength: 92%
-
-### Bugs encontrados por Randoop
-
-Randoop encontró un bug real: `NullPointerException` en el constructor de copia `Board(Board other)`. El constructor no copiaba el campo `str` (la estrategia de generación de fichas), dejándolo en `null`. Al ejecutar `moveDown()` o `moveUp()` sobre un tablero copiado, se lanzaba NPE al intentar agregar una ficha nueva.
-
-**Solución aplicada:** agregar `this.str = other.str;` en el constructor de copia.
-**Estado:** corregido y verificado.
-
-### Tests flaky
-
-Los tests generados por Randoop para `Board` presentan flakiness por diseño: los constructores por defecto (`Board()` y `Board(int)`) usan `GenerateRandomCellStrategy`, que genera fichas en posiciones y valores aleatorios. Esto hace que los tests que asumen un estado específico fallen de forma intermitente.
-
-**Decisión:** se configuró `skipFailingTests=true` en PITest para saltear automáticamente los tests flaky sin perder la cobertura que aportan los tests que sí pasan. Los tests de `randoopTests.cell` (287 tests) pasan todos y aportan cobertura significativa.
-
-### Issue #2: Movimientos y merge — Completado
-
-Se agregaron 4 tests específicos usando `GenerateDeterministicCellStrategy` para verificar que cada movimiento devuelve `false` cuando el tablero no cambia:
-
-- `moveUpDoesNotChangeBoardWhenAllTilesAreAtTop()`
-- `moveDownDoesNotChangeBoardWhenAllTilesAreAtBottom()`
-- `moveLeftDoesNotChangeBoardWhenAllTilesAreAtLeft()`
-- `moveRightDoesNotChangeBoardWhenAllTilesAreAtRight()`
-
-**Resultado:** los 5 métodos del issue alcanzaron 100% mutation score. Cobertura de ramas y mutación por método:
-
-- `moveUp()`: 92% branch / 100% mutation
-- `moveDown()`: 92% branch / 100% mutation
-- `moveLeft()`: 92% branch / 100% mutation
-- `moveRight()`: 92% branch / 100% mutation
-- `mergeAdjacentEqualCells()`: 100% branch / 100% mutation
+![Mutation coverage](./assets/2026-09-17-204752_screenshot.png)
