@@ -19,6 +19,8 @@ import ar.edu.unrc.game2048.GenerateRandomCellStrategy;
  */
 public class Board {
 
+    public static final int MAX_SIZE = 64;
+
     /**
      * Board default number of rows/columns (4 x 4)
      */
@@ -67,6 +69,8 @@ public class Board {
     }
 
     public Board(int size, GenerateCellStrategy str) {
+        if (size > MAX_SIZE) 
+            throw new IllegalArgumentException("The Max Size Allowed is 64x64");
         if (size <= 0) {
             throw new IllegalArgumentException("Board size must be positive: " + size);
         }
@@ -575,7 +579,7 @@ public class Board {
      */
      //@CheckRep
     public boolean repOk(){
-        if(size <= 0)
+        if(size <= 0 || size > MAX_SIZE)
             return false;
 
         if(score < 0)
