@@ -68,10 +68,9 @@ El comando utilizado con randoop para generar los test restantes fue:
 java -cp "lib/randoop-all-4.3.4.jar:target/classes" randoop.main.Main gentests \
 --testclass=ar.edu.unrc.game2048.Board \
 --testclass=ar.edu.unrc.game2048.GenerateDeterministicCellStrategy \
---omit-methods="ar.edu.unrc.game2048.Board.()" \
---omit-methods="ar.edu.unrc.game2048.Board.(int)" \
---omit-methods="ar.edu.unrc.game2048.GenerateRandomCellStrategy.<init>()" \
---time-limit=10 \
+--testclass=ar.edu.unrc.game2048.GenerateRandomCellStrategy \
+--omit-methods-file=omit-methods.txt \
+--time-limit=60 \
 --junit-output-dir=src/test/java \
 --junit-package-name=randoopTests.board
 ```

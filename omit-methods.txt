@@ -1,0 +1,4 @@
+# omit-methods.txt
+ar\.edu\.unrc\.game2048\.Board\.<init>\(\)
+ar\.edu\.unrc\.game2048\.Board\.<init>\(int\)
+ar\.edu\.unrc\.game2048\.GenerateRandomCellStrategy\.<init>\(\)
