@@ -74,3 +74,14 @@ java -cp "lib/randoop-all-4.3.4.jar:target/classes" randoop.main.Main gentests \
 --junit-output-dir=src/test/java \
 --junit-package-name=randoopTests.board
 ```
+
+Comando para correr `evosuiteparam.sh`:
+
+````bash
+chmod +x evosuiteparam.sh
+./evosuiteparam.sh Cell                           # normal
+FIX_CLASSLOADER=1 ./evosuiteparam.sh Cell         # si la cobertura sale en 0
+SEARCH_BUDGET=30 ./evosuiteparam.sh Cell          # prueba rápida
+EVOSUITE_JAR=/ruta/al/jar ./evosuiteparam.sh Cell # otro jar```
+```
+````
