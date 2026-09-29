@@ -17,16 +17,12 @@ public class GenerateDeterministicCellStrategy implements GenerateCellStrategy{
         this.values = values;
     }
 
-    public void addTile(Board board) {
-        int row = nextInt();
-        int col = nextInt();
-        Integer value = nextInt();
-        if (row < 0 || row >= board.getSize() || col < 0 || col >= board.getSize()) {
-                throw new IllegalStateException(
-                    "Deterministic strategy produced invalid position: (" + row + "," + col + ")"
-            );
-        }
-        board.setCell(row, col, new Cell(value));
+   public void addTile(Board board) {
+    int row = Math.abs(nextInt()) % board.getSize();
+    int col = Math.abs(nextInt()) % board.getSize();
+    int rawValue = Math.abs(nextInt());
+    int value = (rawValue == 0 || (rawValue & (rawValue - 1)) != 0) ? 2 : rawValue;
+    board.setCell(row, col, new Cell(value));
     }
 
     public void reset() {
