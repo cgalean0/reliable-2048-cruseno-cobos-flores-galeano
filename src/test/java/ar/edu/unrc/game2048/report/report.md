@@ -61,3 +61,17 @@ Además del análisis de cobertura también volvimos a correr PITest
 y el resultado nos muestra como mejoró la cobertura de mutation test.
 
 ![Mutation coverage](./assets/2026-09-17-204752_screenshot.png)
+
+El comando utilizado con randoop para generar los test restantes fue:
+
+```bash
+java -cp "lib/randoop-all-4.3.4.jar:target/classes" randoop.main.Main gentests \
+--testclass=ar.edu.unrc.game2048.Board \
+--testclass=ar.edu.unrc.game2048.GenerateDeterministicCellStrategy \
+--omit-methods="ar.edu.unrc.game2048.Board.()" \
+--omit-methods="ar.edu.unrc.game2048.Board.(int)" \
+--omit-methods="ar.edu.unrc.game2048.GenerateRandomCellStrategy.<init>()" \
+--time-limit=10 \
+--junit-output-dir=src/test/java \
+--junit-package-name=randoopTests.board
+```
