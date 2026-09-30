@@ -13,6 +13,7 @@ import ar.edu.unrc.game2048.GenerateRandomCellStrategy;
  * - grid is a non-null square matrix (rows == cols)
  * - all cells in the grid are non-null (they may be EMPTY)
  * - all cell values are valid per Cell invariants
+ * - emptyPositions is non-null and contains exactly the positions of all EMPTY cells in the grid
  * - the board is always in a valid game state
  *
  * Thread-safety: This class is not thread-safe.
@@ -40,6 +41,11 @@ public class Board {
      * Contents of the board: a 2D array of Cells. grid[row][col] represents the cell at (row, col).
      */
     private final Cell[][] grid;
+
+    /**
+     * Set of positions of empty cells on the board.
+     */
+    private final HashSet<Position> emptyPositions;
 
     private GenerateCellStrategy str;
 
@@ -76,6 +82,7 @@ public class Board {
         }
         this.size = size;
         this.grid = new Cell[size][size];
+        this.emptyPositions = new HashSet<>();
         this.score = 0;
         this.str = str;
 
@@ -103,6 +110,9 @@ public class Board {
         if (str instanceof GenerateDeterministicCellStrategy) {
             ((GenerateDeterministicCellStrategy) str).reset();
         }
+        this.emptyPositions = other.emptyPositions != null
+                ? new HashSet<>(other.emptyPositions)
+                : new HashSet<>();
         for (int r = 0; r < size; r++) {
             for (int c = 0; c < size; c++) {
                 this.grid[r][c] = other.grid[r][c];
@@ -115,9 +125,11 @@ public class Board {
      * Initializes the board with all EMPTY cells.
      */
     private void initializeEmpty() {
+        emptyPositions.clear();
         for (int r = 0; r < size; r++) {
             for (int c = 0; c < size; c++) {
                 grid[r][c] = Cell.EMPTY;
+                emptyPositions.add(new Position(r, c));
             }
         }
     }
@@ -167,9 +179,34 @@ public class Board {
         if (cell == null) {
             throw new IllegalArgumentException("Cell cannot be null");
         }
-        grid[row][col] = cell;
+        updateCell(row, col, cell);
 
         assert repOk();
+    }
+
+    /**
+     * Updates the cell at the specified position and maintains emptyPositions.
+     *
+     * @param row the row index
+     * @param col the column index
+     * @param newCell the new cell to place at (row, col)
+     */
+    private void updateCell(int row, int col, Cell newCell) {
+        Cell oldCell = grid[row][col];
+        if (oldCell == null || !oldCell.equals(newCell)) {
+            grid[row][col] = newCell;
+            if (oldCell == null) {
+                if (newCell.isEmpty()) {
+                    emptyPositions.add(new Position(row, col));
+                } else {
+                    emptyPositions.remove(new Position(row, col));
+                }
+            } else if (oldCell.isEmpty() && !newCell.isEmpty()) {
+                emptyPositions.remove(new Position(row, col));
+            } else if (!oldCell.isEmpty() && newCell.isEmpty()) {
+                emptyPositions.add(new Position(row, col));
+            }
+        }
     }
 
     /**
@@ -194,15 +231,7 @@ public class Board {
      * @return a set of positions of all empty cells
      */
     public Set<Position> getEmptyPositions() {
-        Set<Position> empty = new HashSet<>();
-        for (int r = 0; r < size; r++) {
-            for (int c = 0; c < size; c++) {
-                if (grid[r][c].isEmpty()) {
-                    empty.add(new Position(r, c));
-                }
-            }
-        }
-        return empty;
+        return emptyPositions;
     }
 
     /**
@@ -211,7 +240,7 @@ public class Board {
      * @return true if there is at least one empty cell
      */
     public boolean hasEmptyCells() {
-        return !getEmptyPositions().isEmpty();
+        return !emptyPositions.isEmpty();
     }
 
     /**
@@ -300,7 +329,7 @@ public class Board {
 
             // Put back into the column
             for (int row = 0; row < size; row++) {
-                grid[row][col] = merged.get(row);
+                updateCell(row, col, merged.get(row));
             }
         }
 
@@ -342,7 +371,7 @@ public class Board {
 
             // Put back into the column (reverse back to original order)
             for (int row = size - 1; row >= 0; row--) {
-                grid[row][col] = merged.get(size - 1 - row);
+                updateCell(row, col, merged.get(size - 1 - row));
             }
         }
 
@@ -384,7 +413,7 @@ public class Board {
 
             // Put back into the row
             for (int col = 0; col < size; col++) {
-                grid[row][col] = merged.get(col);
+                updateCell(row, col, merged.get(col));
             }
         }
 
@@ -426,7 +455,7 @@ public class Board {
 
             // Put back into the row (reverse back to original order)
             for (int col = size - 1; col >= 0; col--) {
-                grid[row][col] = merged.get(size - 1 - col);
+                updateCell(row, col, merged.get(size - 1 - col));
             }
         }
 
@@ -600,6 +629,26 @@ public class Board {
                     return false;
                 }
             }
+        }
+
+        if (emptyPositions == null) {
+            return false;
+        }
+
+        int emptyCount = 0;
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                if (grid[i][j].isEmpty()) {
+                    emptyCount++;
+                    if (!emptyPositions.contains(new Position(i, j))) {
+                        return false;
+                    }
+                }
+            }
+        }
+
+        if (emptyPositions.size() != emptyCount) {
+            return false;
         }
 
         return true;

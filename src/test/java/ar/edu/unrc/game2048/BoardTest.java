@@ -1042,6 +1042,97 @@ public class BoardTest {
 		assertNotNull(Board.Direction.RIGHT);
 	}
 
+	// ----- DYNAMIC EMPTY POSITIONS TRACKING TESTS -----
+
+	@Test
+	void testEmptyPositionsDynamicallyUpdatedOnSetCell() {
+		Board board = new Board(4);
+		clearBoard(board);
+
+		assertEquals(16, board.getEmptyPositions().size());
+		for (int r = 0; r < 4; r++) {
+			for (int c = 0; c < 4; c++) {
+				assertTrue(board.getEmptyPositions().contains(new Board.Position(r, c)));
+			}
+		}
+
+		// Occupy a cell
+		board.setCell(0, 0, new Cell(2));
+		assertEquals(15, board.getEmptyPositions().size());
+		assertFalse(board.getEmptyPositions().contains(new Board.Position(0, 0)));
+		assertTrue(board.repOk());
+
+		// Free the cell back
+		board.setCell(0, 0, Cell.EMPTY);
+		assertEquals(16, board.getEmptyPositions().size());
+		assertTrue(board.getEmptyPositions().contains(new Board.Position(0, 0)));
+		assertTrue(board.repOk());
+
+		// Change value between non-empty cells
+		board.setCell(1, 1, new Cell(4));
+		assertEquals(15, board.getEmptyPositions().size());
+		board.setCell(1, 1, new Cell(8));
+		assertEquals(15, board.getEmptyPositions().size());
+		assertFalse(board.getEmptyPositions().contains(new Board.Position(1, 1)));
+		assertTrue(board.repOk());
+	}
+
+	@Test
+	void testEmptyPositionsDynamicallyUpdatedOnSlideAndMerge() {
+		Board board = new Board(4);
+		clearBoard(board);
+
+		// Place two 2s in column 0 at rows 1 and 3
+		board.setCell(1, 0, new Cell(2));
+		board.setCell(3, 0, new Cell(2));
+
+		assertEquals(14, board.getEmptyPositions().size());
+		assertFalse(board.getEmptyPositions().contains(new Board.Position(1, 0)));
+		assertFalse(board.getEmptyPositions().contains(new Board.Position(3, 0)));
+
+		// Move up: the two tiles merge into 4 at (0, 0), freeing (1, 0) and (3, 0)
+		// and one new random tile will be added
+		boolean moved = board.moveUp();
+		assertTrue(moved);
+		assertEquals(4, board.getCell(0, 0).getValue());
+
+		// Board should have 16 - 2 = 14 empty positions (one merged tile at (0,0) + one newly generated tile)
+		assertEquals(14, board.getEmptyPositions().size());
+		assertFalse(board.getEmptyPositions().contains(new Board.Position(0, 0)));
+
+		// Check consistency across the entire board
+		for (int r = 0; r < 4; r++) {
+			for (int c = 0; c < 4; c++) {
+				if (board.getCell(r, c).isEmpty()) {
+					assertTrue(board.getEmptyPositions().contains(new Board.Position(r, c)));
+				} else {
+					assertFalse(board.getEmptyPositions().contains(new Board.Position(r, c)));
+				}
+			}
+		}
+		assertTrue(board.repOk());
+	}
+
+	@Test
+	void testEmptyPositionsOnFullBoardAndTransitions() {
+		Board board = new Board(4);
+		fillBoard(board, 2);
+
+		assertEquals(0, board.getEmptyPositions().size());
+		assertTrue(board.getEmptyPositions().isEmpty());
+		assertTrue(board.isFull());
+		assertFalse(board.hasEmptyCells());
+		assertTrue(board.repOk());
+
+		// Free one cell
+		board.setCell(2, 3, Cell.EMPTY);
+		assertEquals(1, board.getEmptyPositions().size());
+		assertFalse(board.getEmptyPositions().isEmpty());
+		assertFalse(board.isFull());
+		assertTrue(board.hasEmptyCells());
+		assertTrue(board.getEmptyPositions().contains(new Board.Position(2, 3)));
+		assertTrue(board.repOk());
+	}
 
 	// ----- AUX METHODS -----
 
