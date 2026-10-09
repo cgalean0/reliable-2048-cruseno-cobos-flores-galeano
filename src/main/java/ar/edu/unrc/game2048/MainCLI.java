@@ -49,16 +49,33 @@ public class MainCLI {
 
             boolean moved = false;
             switch (input) {
-                case "W": moved = board.moveUp(); break;
-                case "S": moved = board.moveDown(); break;
-                case "A": moved = board.moveLeft(); break;
-                case "D": moved = board.moveRight(); break;
+                case "W":
+                    moved = board.moveUp();
+                    assert board.repOk();
+                    break;
+
+                case "S":
+                    moved = board.moveDown();
+                    assert board.repOk();
+                    break;
+
+                case "A":
+                    moved = board.moveLeft();
+                    assert board.repOk();
+                    break;
+
+                case "D":
+                    moved = board.moveRight();
+                    assert board.repOk();
+                    break;
+
                 default:
                     System.out.println("Invalid input! Use W, A, S, D, or Q.");
                     continue;
             }
 
             if (moved) {
+                assert board.repOk(); 
                 System.out.println("Tile moved!");
             } else {
                 System.out.println("No tiles moved. Try a different direction.");
