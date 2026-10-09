@@ -28,17 +28,10 @@ for C in "$@"; do
     -projectCP "$CLASS_PATH" \
     -class "$PKG.$C" \
     -Dsearch_budget="$SEARCH_BUDGET" \
+    -Dno_runtime_dependency=true \
+    -Duse_separate_classloader=false \
     -Dtest_dir="$TEST_DIR"
 done
-
-# Ajuste opcional para que JaCoCo registre bien la cobertura
-# (EvoSuite genera separateClassLoader = true)
-if [ "${FIX_CLASSLOADER:-0}" = "1" ]; then
-  for C in "$@"; do
-    sed -i 's/separateClassLoader = true/separateClassLoader = false/' \
-      "$PKG_DIR/${C}_ESTest.java"
-  done
-fi
 
 # Correr solo los _ESTest de las clases pasadas (Cell -> Cell_ESTest)
 TESTS=$(printf "%s_ESTest," "$@")

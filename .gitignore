@@ -25,3 +25,11 @@ replay_pid*
 
 target/
 .scaffolding_list.tmp
+
+# EvoSuite
+evosuite-report/
+lib/evosuite-*.jar
+
+# Backup y reportes temporales
+backup_evosuite/
+reportes_cobertura/
