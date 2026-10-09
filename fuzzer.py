@@ -110,8 +110,6 @@ class RandomFuzzer(Fuzzer):
 
     def fuzz(self) -> str:
         """
-        TODO: Implement this method.
-
         Return a string representing a sequence of moves for the 2048 CLI.
         Each key must be on its own line (followed by '\\n').
         The sequence must end with the quit key ('q') on its own line.
@@ -122,7 +120,9 @@ class RandomFuzzer(Fuzzer):
         Example output for a sequence of 3 moves:
             'w\\na\\nd\\nq\\n'
         """
-        raise NotImplementedError
+        length = random.randint(self.min_length, self.max_length)
+        moves = [random.choice(KEYS) for _ in range(length)]
+        return "\n".join(moves) + "\n" + QUIT + "\n"
 
 # ---------------------------------------------------------------------------
 # Main: run the fuzzer and report results
