@@ -47,7 +47,7 @@ class CLIRunner(Runner):
     PASS, FAIL, or UNRESOLVED.
     """
 
-    COMMAND = ['java', '-cp', './target/classes', 'ar.edu.unrc.game2048.MainCLI']
+    COMMAND = ['java', '-ea', '-cp', './target/classes', 'ar.edu.unrc.game2048.MainCLI']
     TIMEOUT = 10  # seconds
 
     def run(self, inp: str) -> Tuple[subprocess.CompletedProcess, str]:
@@ -110,8 +110,6 @@ class RandomFuzzer(Fuzzer):
 
     def fuzz(self) -> str:
         """
-        TODO: Implement this method.
-
         Return a string representing a sequence of moves for the 2048 CLI.
         Each key must be on its own line (followed by '\\n').
         The sequence must end with the quit key ('q') on its own line.
@@ -122,7 +120,9 @@ class RandomFuzzer(Fuzzer):
         Example output for a sequence of 3 moves:
             'w\\na\\nd\\nq\\n'
         """
-        raise NotImplementedError
+        length = random.randint(self.min_length, self.max_length)
+        moves = [random.choice(KEYS) for _ in range(length)]
+        return "\n".join(moves) + "\n" + QUIT + "\n"
 
 # ---------------------------------------------------------------------------
 # Main: run the fuzzer and report results
@@ -130,9 +130,9 @@ class RandomFuzzer(Fuzzer):
 
 def main():
     runner = CLIRunner()
-    fuzzer = RandomFuzzer(min_length=10, max_length=50)
+    fuzzer = RandomFuzzer(min_length=100, max_length=200)
 
-    trials = 20
+    trials = 1000
     outcomes = {PASS: 0, FAIL: 0, UNRESOLVED: 0}
 
     print(f"Running {trials} fuzzing trials...\n")
@@ -148,8 +148,8 @@ def main():
 
         if result is not None:
             print(f"Exit  : {result.returncode}")
-            if result.stdout:
-                print(f"Output: {result.stdout.strip()}")
+            # if result.stdout:
+            #    print(f"Output: {result.stdout.strip()}")
             if result.stderr:
                 print(f"Stderr: {result.stderr.strip()}")
 
