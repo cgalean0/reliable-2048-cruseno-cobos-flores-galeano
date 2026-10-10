@@ -47,7 +47,7 @@ class CLIRunner(Runner):
     PASS, FAIL, or UNRESOLVED.
     """
 
-    COMMAND = ['java', '-cp', './target/classes', 'ar.edu.unrc.game2048.MainCLI']
+    COMMAND = ['java', '-ea', '-cp', './target/classes', 'ar.edu.unrc.game2048.MainCLI']
     TIMEOUT = 10  # seconds
 
     def run(self, inp: str) -> Tuple[subprocess.CompletedProcess, str]:
@@ -130,9 +130,9 @@ class RandomFuzzer(Fuzzer):
 
 def main():
     runner = CLIRunner()
-    fuzzer = RandomFuzzer(min_length=10, max_length=50)
+    fuzzer = RandomFuzzer(min_length=100, max_length=200)
 
-    trials = 20
+    trials = 10
     outcomes = {PASS: 0, FAIL: 0, UNRESOLVED: 0}
 
     print(f"Running {trials} fuzzing trials...\n")

@@ -51,21 +51,25 @@ public class MainCLI {
             switch (input) {
                 case "W":
                     moved = board.moveUp();
+                    System.out.println("Up.");
                     assert board.repOk();
                     break;
 
                 case "S":
                     moved = board.moveDown();
+                    System.out.println("Down.");
                     assert board.repOk();
                     break;
 
                 case "A":
                     moved = board.moveLeft();
+                    System.out.println("Left.");
                     assert board.repOk();
                     break;
 
                 case "D":
                     moved = board.moveRight();
+                    System.out.println("Right.");
                     assert board.repOk();
                     break;
 
