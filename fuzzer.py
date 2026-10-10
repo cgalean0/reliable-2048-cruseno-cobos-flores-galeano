@@ -132,7 +132,7 @@ def main():
     runner = CLIRunner()
     fuzzer = RandomFuzzer(min_length=100, max_length=200)
 
-    trials = 10
+    trials = 1000
     outcomes = {PASS: 0, FAIL: 0, UNRESOLVED: 0}
 
     print(f"Running {trials} fuzzing trials...\n")
@@ -148,8 +148,8 @@ def main():
 
         if result is not None:
             print(f"Exit  : {result.returncode}")
-            if result.stdout:
-                print(f"Output: {result.stdout.strip()}")
+            # if result.stdout:
+            #    print(f"Output: {result.stdout.strip()}")
             if result.stderr:
                 print(f"Stderr: {result.stderr.strip()}")
 
