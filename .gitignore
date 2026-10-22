@@ -25,3 +25,6 @@ replay_pid*
 
 target/
 .scaffolding_list.tmp
+reportes_cobertura/
+backup_evosuite/
+evosuite-report/
