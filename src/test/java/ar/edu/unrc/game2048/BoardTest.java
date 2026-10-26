@@ -1,6 +1,6 @@
 package ar.edu.unrc.game2048;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,7 +9,7 @@ import java.util.Set;
 import java.util.List;
 
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class BoardTest {
 
@@ -129,14 +129,14 @@ public class BoardTest {
 	}
 
 	@Test
-	void winingBoardTestTwo() {
+	public void winingBoardTestTwo() {
 	    Board b = new Board();
 		b.setCell(3, 3, new Cell(2048));
 		assertTrue(b.isWinningBoard());
 	}
 
 	@Test
-	void winingBoardTest() {
+	public void winingBoardTest() {
 	    Board b = new Board();
 		b.setCell(0, 3, new Cell(2048));
 		assertTrue(b.isWinningBoard());
@@ -1021,20 +1021,20 @@ public class BoardTest {
 
 	//repOk()
 	@Test
-	void repOkTest() {
+	public void repOkTest() {
 		Board board = new Board(4, new GenerateRandomCellStrategy());
 		assertTrue(board.repOk());
 	}
 
 	@Test
-	void positionEqualsSelf() {
+	public void positionEqualsSelf() {
 		Board.Position pos = new Board.Position(1, 2);
 		assertEquals(pos, pos);
 	}
 
 	//direction
 	@Test
-	void directionEnumExists() {
+	public void directionEnumExists() {
 		assertEquals(4, Board.Direction.values().length);
 		assertNotNull(Board.Direction.UP);
 		assertNotNull(Board.Direction.DOWN);
@@ -1045,7 +1045,7 @@ public class BoardTest {
 	// ----- DYNAMIC EMPTY POSITIONS TRACKING TESTS -----
 
 	@Test
-	void testEmptyPositionsDynamicallyUpdatedOnSetCell() {
+	public void testEmptyPositionsDynamicallyUpdatedOnSetCell() {
 		Board board = new Board(4);
 		clearBoard(board);
 
@@ -1078,7 +1078,7 @@ public class BoardTest {
 	}
 
 	@Test
-	void testEmptyPositionsDynamicallyUpdatedOnSlideAndMerge() {
+	public void testEmptyPositionsDynamicallyUpdatedOnSlideAndMerge() {
 		Board board = new Board(4);
 		clearBoard(board);
 
@@ -1114,7 +1114,7 @@ public class BoardTest {
 	}
 
 	@Test
-	void testEmptyPositionsOnFullBoardAndTransitions() {
+	public void testEmptyPositionsOnFullBoardAndTransitions() {
 		Board board = new Board(4);
 		fillBoard(board, 2);
 
