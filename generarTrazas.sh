@@ -1,8 +1,5 @@
 #!/bin/bash
 
-echo "=================================================="
-echo "Preparando el entorno..."
-echo "=================================================="
 mkdir -p daikon-traces
 rm -f daikon-traces/*.dtrace daikon-traces/*.dtrace.gz
 
@@ -39,13 +36,9 @@ java -cp "$DAIKON_JAR:$RANDOOP_JAR:$BASE_CP" \
      org.junit.runner.JUnitCore \
      randoopTests.board.RegressionTest0 randoopTests.cell.RegressionTest0
 
-echo "=================================================="
-echo "3. Trazas: EvoSuite Test Suite (OMITIDO)"
-echo "=================================================="
-echo "Omitido por incompatibilidad de agentes y versiones de Java (Java 8 vs 11+)."
 
 echo "=================================================="
-echo "4. Trazas: Fuzzer (MainCLI con generador.py)"
+echo "3. Trazas: Fuzzer (MainCLI con generador.py)"
 echo "=================================================="
 # Pasa la salida limpia de generador.py a la ejecución instrumentada de Chicory
 python3 generador.py | java -cp "$DAIKON_JAR:target/classes" \
@@ -55,6 +48,4 @@ python3 generador.py | java -cp "$DAIKON_JAR:target/classes" \
      ar.edu.unrc.game2048.MainCLI
 
 echo "=================================================="
-echo "¡Trazas generadas con éxito!"
 ls -l daikon-traces/
-echo "=================================================="

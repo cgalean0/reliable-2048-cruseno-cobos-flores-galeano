@@ -1,0 +1,865 @@
+  ar.edu.unrc.game2048.Board.Board(int, ar.edu.unrc.game2048.GenerateCellStrategy) : 25 invocations
+  ar.edu.unrc.game2048.GenerateDeterministicCellStrategy.addTile(ar.edu.unrc.game2048.Board) : 17 invocations
+  ar.edu.unrc.game2048.Board.Board(ar.edu.unrc.game2048.Board) : 1 invocation
+  ar.edu.unrc.game2048.Board.setCell(int, int, ar.edu.unrc.game2048.Cell) : 31 invocations
+  ar.edu.unrc.game2048.Board.validatePosition(int, int) : 54 invocations
+  ar.edu.unrc.game2048.Board.getCell(int, int) : 24 invocations
+  ar.edu.unrc.game2048.Cell.mergeWith(ar.edu.unrc.game2048.Cell) : 78 invocations
+  ar.edu.unrc.game2048.Cell.Cell(int) : 12 invocations
+  ar.edu.unrc.game2048.Cell.canMergeWith(ar.edu.unrc.game2048.Cell) : 7 invocations
+ar.edu.unrc.game2048.Board$Direction:::CLASS
+ar.edu.unrc.game2048.Board$Direction.UP has only one value
+ar.edu.unrc.game2048.Board$Direction.DOWN has only one value
+ar.edu.unrc.game2048.Board$Direction.LEFT has only one value
+ar.edu.unrc.game2048.Board$Direction.RIGHT has only one value
+ar.edu.unrc.game2048.Board$Direction.$VALUES has only one value
+ar.edu.unrc.game2048.Board$Direction.$VALUES.getClass().getName() == ar.edu.unrc.game2048.Board$Direction[].class
+ar.edu.unrc.game2048.Board$Direction.$VALUES[] contains no nulls and has only one value, of length 4
+ar.edu.unrc.game2048.Board$Direction.$VALUES[].getClass().getName() == [ar.edu.unrc.game2048.Board.Direction, ar.edu.unrc.game2048.Board.Direction, ar.edu.unrc.game2048.Board.Direction, ar.edu.unrc.game2048.Board.Direction]
+ar.edu.unrc.game2048.Board$Direction.$VALUES[].getClass().getName() elements == ar.edu.unrc.game2048.Board.Direction.class
+size(ar.edu.unrc.game2048.Board$Direction.$VALUES[]) == 4
+ar.edu.unrc.game2048.Board$Direction.UP in ar.edu.unrc.game2048.Board$Direction.$VALUES[]
+ar.edu.unrc.game2048.Board$Direction.DOWN in ar.edu.unrc.game2048.Board$Direction.$VALUES[]
+ar.edu.unrc.game2048.Board$Direction.LEFT in ar.edu.unrc.game2048.Board$Direction.$VALUES[]
+ar.edu.unrc.game2048.Board$Direction.RIGHT in ar.edu.unrc.game2048.Board$Direction.$VALUES[]
+ar.edu.unrc.game2048.Board$Direction:::OBJECT
+ar.edu.unrc.game2048.Board$Direction.Direction(java.lang.String, int):::ENTER
+ar.edu.unrc.game2048.Board$Direction.Direction(java.lang.String, int):::EXIT
+ar.edu.unrc.game2048.Board$Direction.values():::ENTER
+ar.edu.unrc.game2048.Board$Direction.values():::EXIT
+ar.edu.unrc.game2048.Board$Direction.UP == orig(ar.edu.unrc.game2048.Board$Direction.UP)
+ar.edu.unrc.game2048.Board$Direction.DOWN == orig(ar.edu.unrc.game2048.Board$Direction.DOWN)
+ar.edu.unrc.game2048.Board$Direction.LEFT == orig(ar.edu.unrc.game2048.Board$Direction.LEFT)
+ar.edu.unrc.game2048.Board$Direction.RIGHT == orig(ar.edu.unrc.game2048.Board$Direction.RIGHT)
+ar.edu.unrc.game2048.Board$Direction.$VALUES == orig(ar.edu.unrc.game2048.Board$Direction.$VALUES)
+ar.edu.unrc.game2048.Board$Direction.$VALUES.getClass().getName() == return.getClass().getName()
+ar.edu.unrc.game2048.Board$Direction.$VALUES.getClass().getName() == orig(ar.edu.unrc.game2048.Board$Direction.$VALUES.getClass().getName())
+ar.edu.unrc.game2048.Board$Direction.$VALUES[] == return[]
+ar.edu.unrc.game2048.Board$Direction.$VALUES[] == orig(ar.edu.unrc.game2048.Board$Direction.$VALUES[])
+ar.edu.unrc.game2048.Board$Position:::OBJECT
+ar.edu.unrc.game2048.Board$Position.Position(int, int):::ENTER
+ar.edu.unrc.game2048.Board$Position.Position(int, int):::EXIT
+ar.edu.unrc.game2048.Board$Position.equals(java.lang.Object):::ENTER
+ar.edu.unrc.game2048.Board$Position.equals(java.lang.Object):::EXIT587
+orig(o.getClass().getName()) == ar.edu.unrc.game2048.Board$Position.class
+ar.edu.unrc.game2048.Board$Position.equals(java.lang.Object):::EXIT587;condition="return == true"
+ar.edu.unrc.game2048.Board$Position.equals(java.lang.Object):::EXIT588
+ar.edu.unrc.game2048.Board$Position.equals(java.lang.Object):::EXIT588;condition="not(return == true)"
+ar.edu.unrc.game2048.Board$Position.equals(java.lang.Object):::EXIT590
+orig(o.getClass().getName()) == ar.edu.unrc.game2048.Board$Position.class
+ar.edu.unrc.game2048.Board$Position.equals(java.lang.Object):::EXIT590;condition="return == true"
+ar.edu.unrc.game2048.Board$Position.equals(java.lang.Object):::EXIT590;condition="not(return == true)"
+ar.edu.unrc.game2048.Board$Position.equals(java.lang.Object):::EXIT
+(return == true)  ==>  (orig(o.getClass().getName()) == ar.edu.unrc.game2048.Board$Position.class)
+ar.edu.unrc.game2048.Board$Position.equals(java.lang.Object):::EXIT;condition="return == true"
+orig(o.getClass().getName()) == ar.edu.unrc.game2048.Board$Position.class
+ar.edu.unrc.game2048.Board$Position.equals(java.lang.Object):::EXIT;condition="not(return == true)"
+ar.edu.unrc.game2048.Board$Position.hashCode():::ENTER
+ar.edu.unrc.game2048.Board$Position.hashCode():::EXIT
+ar.edu.unrc.game2048.Board$Position.toString():::ENTER
+ar.edu.unrc.game2048.Board$Position.toString():::EXIT
+ar.edu.unrc.game2048.Board:::CLASS
+ar.edu.unrc.game2048.Board.$assertionsDisabled == false
+ar.edu.unrc.game2048.Board:::OBJECT
+this.grid.getClass().getName() == ar.edu.unrc.game2048.Cell[][].class
+ar.edu.unrc.game2048.Board.MAX_SIZE >= this.size
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE != size(this.grid[])-1
+ar.edu.unrc.game2048.Board.WINNING_VALUE > this.size
+ar.edu.unrc.game2048.Board.WINNING_VALUE != this.score
+ar.edu.unrc.game2048.Board.Board():::EXIT
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE == this.size
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE == size(this.grid[])
+this.str.getClass().getName() == ar.edu.unrc.game2048.GenerateRandomCellStrategy.class
+ar.edu.unrc.game2048.Board.Board(ar.edu.unrc.game2048.Board):::ENTER
+other.grid.getClass().getName() == ar.edu.unrc.game2048.Cell[][].class
+ar.edu.unrc.game2048.Board.$assertionsDisabled == false
+ar.edu.unrc.game2048.Board.MAX_SIZE >= other.size
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE <= other.size
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE != size(other.grid[])-1
+ar.edu.unrc.game2048.Board.WINNING_VALUE > other.size
+ar.edu.unrc.game2048.Board.WINNING_VALUE != other.score
+ar.edu.unrc.game2048.Board.Board(ar.edu.unrc.game2048.Board):::EXIT
+ar.edu.unrc.game2048.Board.$assertionsDisabled == orig(ar.edu.unrc.game2048.Board.$assertionsDisabled)
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE <= this.size
+ar.edu.unrc.game2048.Board.Board(int):::ENTER
+ar.edu.unrc.game2048.Board.Board(int):::EXIT
+this.str.getClass().getName() == ar.edu.unrc.game2048.GenerateRandomCellStrategy.class
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.size
+ar.edu.unrc.game2048.Board.Board(int, ar.edu.unrc.game2048.GenerateCellStrategy):::ENTER
+ar.edu.unrc.game2048.Board.Board(int, ar.edu.unrc.game2048.GenerateCellStrategy):::EXIT
+ar.edu.unrc.game2048.Board.equals(java.lang.Object):::ENTER
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE <= this.size
+ar.edu.unrc.game2048.Board.equals(java.lang.Object):::EXIT522
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE == this.size
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE == orig(this.size)
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE == size(this.grid[])
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE == orig(size(this.grid[]))
+this.str.getClass().getName() == ar.edu.unrc.game2048.GenerateRandomCellStrategy.class
+orig(o.getClass().getName()) == ar.edu.unrc.game2048.Board.class
+this.grid[ar.edu.unrc.game2048.Board.DEFAULT_SIZE-1] has only one value
+ar.edu.unrc.game2048.Board.equals(java.lang.Object):::EXIT522;condition="return == true"
+ar.edu.unrc.game2048.Board.equals(java.lang.Object):::EXIT523
+ar.edu.unrc.game2048.Board.$assertionsDisabled == return
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.size
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.score
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE != this.score
+ar.edu.unrc.game2048.Board.WINNING_VALUE > this.score
+ar.edu.unrc.game2048.Board.equals(java.lang.Object):::EXIT523;condition="not(return == true)"
+ar.edu.unrc.game2048.Board.equals(java.lang.Object):::EXIT525
+(return == false)  ==>  (ar.edu.unrc.game2048.Board.$assertionsDisabled == return)
+(return == true)  ==>  (ar.edu.unrc.game2048.Board.MAX_SIZE > this.size)
+orig(o.getClass().getName()) == ar.edu.unrc.game2048.Board.class
+ar.edu.unrc.game2048.Board.equals(java.lang.Object):::EXIT525;condition="return == true"
+ar.edu.unrc.game2048.Board.equals(java.lang.Object):::EXIT525;condition="not(return == true)"
+ar.edu.unrc.game2048.Board.equals(java.lang.Object):::EXIT
+ar.edu.unrc.game2048.Board.$assertionsDisabled == orig(ar.edu.unrc.game2048.Board.$assertionsDisabled)
+(return == false)  ==>  (ar.edu.unrc.game2048.Board.$assertionsDisabled == return)
+(return == true)  ==>  (ar.edu.unrc.game2048.Board.MAX_SIZE > this.size)
+(return == true)  ==>  (orig(o.getClass().getName()) == ar.edu.unrc.game2048.Board.class)
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE <= this.size
+ar.edu.unrc.game2048.Board.equals(java.lang.Object):::EXIT;condition="return == true"
+orig(o.getClass().getName()) == ar.edu.unrc.game2048.Board.class
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.size
+ar.edu.unrc.game2048.Board.equals(java.lang.Object):::EXIT;condition="not(return == true)"
+ar.edu.unrc.game2048.Board.$assertionsDisabled == return
+ar.edu.unrc.game2048.Board.getCell(int, int):::ENTER
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.size
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.score
+ar.edu.unrc.game2048.Board.MAX_SIZE > row
+ar.edu.unrc.game2048.Board.MAX_SIZE > col
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE <= this.size
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE != row
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE != col
+ar.edu.unrc.game2048.Board.WINNING_VALUE > this.score
+ar.edu.unrc.game2048.Board.WINNING_VALUE > row
+ar.edu.unrc.game2048.Board.WINNING_VALUE > col
+ar.edu.unrc.game2048.Board.getCell(int, int):::EXIT
+ar.edu.unrc.game2048.Board.$assertionsDisabled == ar.edu.unrc.game2048.Cell.$assertionsDisabled
+ar.edu.unrc.game2048.Board.$assertionsDisabled == orig(ar.edu.unrc.game2048.Board.$assertionsDisabled)
+ar.edu.unrc.game2048.Cell.EMPTY != null
+ar.edu.unrc.game2048.Cell.EMPTY.value == 0
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.size
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.score
+ar.edu.unrc.game2048.Board.MAX_SIZE > return.value
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE <= this.size
+ar.edu.unrc.game2048.Board.WINNING_VALUE > this.score
+ar.edu.unrc.game2048.Board.WINNING_VALUE > return.value
+this.score >= ar.edu.unrc.game2048.Cell.EMPTY.value
+return.value >= ar.edu.unrc.game2048.Cell.EMPTY.value
+ar.edu.unrc.game2048.Cell.EMPTY.value <= orig(row)
+ar.edu.unrc.game2048.Cell.EMPTY.value <= orig(col)
+ar.edu.unrc.game2048.Cell.EMPTY.value < size(this.grid[])-1
+ar.edu.unrc.game2048.Board.getEmptyPositions():::ENTER
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.size
+ar.edu.unrc.game2048.Board.getEmptyPositions():::EXIT
+ar.edu.unrc.game2048.Board.$assertionsDisabled == orig(ar.edu.unrc.game2048.Board.$assertionsDisabled)
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.size
+ar.edu.unrc.game2048.Board.getScore():::ENTER
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.size
+ar.edu.unrc.game2048.Board.MAX_SIZE != this.score
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE <= this.size
+ar.edu.unrc.game2048.Board.getScore():::EXIT
+ar.edu.unrc.game2048.Board.$assertionsDisabled == orig(ar.edu.unrc.game2048.Board.$assertionsDisabled)
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.size
+ar.edu.unrc.game2048.Board.MAX_SIZE != return
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE <= this.size
+ar.edu.unrc.game2048.Board.WINNING_VALUE != return
+ar.edu.unrc.game2048.Board.getSize():::ENTER
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.score
+ar.edu.unrc.game2048.Board.WINNING_VALUE > this.score
+ar.edu.unrc.game2048.Board.getSize():::EXIT
+ar.edu.unrc.game2048.Board.$assertionsDisabled == orig(ar.edu.unrc.game2048.Board.$assertionsDisabled)
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.score
+ar.edu.unrc.game2048.Board.MAX_SIZE >= return
+ar.edu.unrc.game2048.Board.WINNING_VALUE > this.score
+ar.edu.unrc.game2048.Board.WINNING_VALUE > return
+ar.edu.unrc.game2048.Board.hasEmptyCells():::ENTER
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.size
+ar.edu.unrc.game2048.Board.hasEmptyCells():::EXIT
+ar.edu.unrc.game2048.Board.$assertionsDisabled == orig(ar.edu.unrc.game2048.Board.$assertionsDisabled)
+(return == false)  ==>  (ar.edu.unrc.game2048.Board.$assertionsDisabled == return)
+(return == false)  ==>  (ar.edu.unrc.game2048.Board.DEFAULT_SIZE != this.score)
+(return == false)  ==>  (ar.edu.unrc.game2048.Board.DEFAULT_SIZE >= this.size)
+(return == false)  ==>  (ar.edu.unrc.game2048.Board.MAX_SIZE != this.score)
+(return == false)  ==>  (this.score % ar.edu.unrc.game2048.Board.DEFAULT_SIZE == 0)
+(return == false)  ==>  (this.str.getClass().getName() == ar.edu.unrc.game2048.GenerateRandomCellStrategy.class)
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.size
+ar.edu.unrc.game2048.Board.hasEmptyCells():::EXIT;condition="return == true"
+ar.edu.unrc.game2048.Board.hasEmptyCells():::EXIT;condition="not(return == true)"
+ar.edu.unrc.game2048.Board.$assertionsDisabled == return
+this.str.getClass().getName() == ar.edu.unrc.game2048.GenerateRandomCellStrategy.class
+ar.edu.unrc.game2048.Board.MAX_SIZE != this.score
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE >= this.size
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE != this.score
+this.score % ar.edu.unrc.game2048.Board.DEFAULT_SIZE == 0
+ar.edu.unrc.game2048.Board.hashCode():::ENTER
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE == this.size
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE == size(this.grid[])
+this.str.getClass().getName() == ar.edu.unrc.game2048.GenerateDeterministicCellStrategy.class
+ar.edu.unrc.game2048.Board.hashCode():::EXIT
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE == this.size
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE == size(this.grid[])
+ar.edu.unrc.game2048.Board.$assertionsDisabled == orig(ar.edu.unrc.game2048.Board.$assertionsDisabled)
+this.str.getClass().getName() == ar.edu.unrc.game2048.GenerateDeterministicCellStrategy.class
+ar.edu.unrc.game2048.Board.initializeEmpty():::ENTER
+ar.edu.unrc.game2048.Board.initializeEmpty():::EXIT
+ar.edu.unrc.game2048.Board.$assertionsDisabled == orig(ar.edu.unrc.game2048.Board.$assertionsDisabled)
+ar.edu.unrc.game2048.Board.isFull():::ENTER
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.size
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.score
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE > this.score
+ar.edu.unrc.game2048.Board.WINNING_VALUE > this.score
+ar.edu.unrc.game2048.Board.isFull():::EXIT
+ar.edu.unrc.game2048.Board.$assertionsDisabled == orig(ar.edu.unrc.game2048.Board.$assertionsDisabled)
+(return == false)  ==>  (ar.edu.unrc.game2048.Board.$assertionsDisabled == return)
+(return == true)  ==>  (this.str.getClass().getName() == ar.edu.unrc.game2048.GenerateRandomCellStrategy.class)
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.size
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.score
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE > this.score
+ar.edu.unrc.game2048.Board.WINNING_VALUE > this.score
+ar.edu.unrc.game2048.Board.isFull():::EXIT;condition="return == true"
+this.str.getClass().getName() == ar.edu.unrc.game2048.GenerateRandomCellStrategy.class
+ar.edu.unrc.game2048.Board.isFull():::EXIT;condition="not(return == true)"
+ar.edu.unrc.game2048.Board.$assertionsDisabled == return
+ar.edu.unrc.game2048.Board.isLosingBoard():::ENTER
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.size
+ar.edu.unrc.game2048.Board.isLosingBoard():::EXIT272
+ar.edu.unrc.game2048.Board.$assertionsDisabled == return
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE <= this.size
+ar.edu.unrc.game2048.Board.isLosingBoard():::EXIT272;condition="not(return == true)"
+ar.edu.unrc.game2048.Board.isLosingBoard():::EXIT281
+ar.edu.unrc.game2048.Board.$assertionsDisabled == return
+this.str.getClass().getName() == ar.edu.unrc.game2048.GenerateRandomCellStrategy.class
+ar.edu.unrc.game2048.Board.MAX_SIZE != this.score
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE >= this.size
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE != this.score
+this.score % ar.edu.unrc.game2048.Board.DEFAULT_SIZE == 0
+ar.edu.unrc.game2048.Board.isLosingBoard():::EXIT281;condition="not(return == true)"
+ar.edu.unrc.game2048.Board.isLosingBoard():::EXIT285
+ar.edu.unrc.game2048.Board.$assertionsDisabled == return
+this.str.getClass().getName() == ar.edu.unrc.game2048.GenerateRandomCellStrategy.class
+ar.edu.unrc.game2048.Board.MAX_SIZE != this.score
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE >= this.size
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE != this.score
+this.score % ar.edu.unrc.game2048.Board.DEFAULT_SIZE == 0
+ar.edu.unrc.game2048.Board.isLosingBoard():::EXIT285;condition="not(return == true)"
+ar.edu.unrc.game2048.Board.isLosingBoard():::EXIT289
+this.str.getClass().getName() == ar.edu.unrc.game2048.GenerateRandomCellStrategy.class
+ar.edu.unrc.game2048.Board.isLosingBoard():::EXIT289;condition="return == true"
+ar.edu.unrc.game2048.Board.isLosingBoard():::EXIT
+ar.edu.unrc.game2048.Board.$assertionsDisabled == orig(ar.edu.unrc.game2048.Board.$assertionsDisabled)
+(return == false)  ==>  (ar.edu.unrc.game2048.Board.$assertionsDisabled == return)
+(return == true)  ==>  (this.str.getClass().getName() == ar.edu.unrc.game2048.GenerateRandomCellStrategy.class)
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.size
+ar.edu.unrc.game2048.Board.isLosingBoard():::EXIT;condition="return == true"
+this.str.getClass().getName() == ar.edu.unrc.game2048.GenerateRandomCellStrategy.class
+ar.edu.unrc.game2048.Board.isLosingBoard():::EXIT;condition="not(return == true)"
+ar.edu.unrc.game2048.Board.$assertionsDisabled == return
+ar.edu.unrc.game2048.Board.isWinningBoard():::ENTER
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.size
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE <= this.size
+ar.edu.unrc.game2048.Board.isWinningBoard():::EXIT256
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE == this.size
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE == orig(this.size)
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE == size(this.grid[])
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE == orig(size(this.grid[]))
+this.str.getClass().getName() == ar.edu.unrc.game2048.GenerateRandomCellStrategy.class
+ar.edu.unrc.game2048.Board.isWinningBoard():::EXIT256;condition="return == true"
+ar.edu.unrc.game2048.Board.isWinningBoard():::EXIT260
+ar.edu.unrc.game2048.Board.$assertionsDisabled == return
+ar.edu.unrc.game2048.Board.isWinningBoard():::EXIT260;condition="not(return == true)"
+ar.edu.unrc.game2048.Board.isWinningBoard():::EXIT
+ar.edu.unrc.game2048.Board.$assertionsDisabled == orig(ar.edu.unrc.game2048.Board.$assertionsDisabled)
+(return == false)  ==>  (ar.edu.unrc.game2048.Board.$assertionsDisabled == return)
+(return == true)  ==>  (ar.edu.unrc.game2048.Board.DEFAULT_SIZE == this.size)
+(return == true)  ==>  (this.str.getClass().getName() == ar.edu.unrc.game2048.GenerateRandomCellStrategy.class)
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.size
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE <= this.size
+ar.edu.unrc.game2048.Board.isWinningBoard():::EXIT;condition="return == true"
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE == this.size
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE == orig(this.size)
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE == size(this.grid[])
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE == orig(size(this.grid[]))
+this.str.getClass().getName() == ar.edu.unrc.game2048.GenerateRandomCellStrategy.class
+ar.edu.unrc.game2048.Board.isWinningBoard():::EXIT;condition="not(return == true)"
+ar.edu.unrc.game2048.Board.$assertionsDisabled == return
+ar.edu.unrc.game2048.Board.mergeAdjacentEqualCells(java.util.List):::ENTER
+cellList[].getClass().getName() elements == ar.edu.unrc.game2048.Cell.class
+ar.edu.unrc.game2048.Board.MAX_SIZE > size(cellList[])
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE <= this.size
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE >= size(cellList[])
+ar.edu.unrc.game2048.Board.WINNING_VALUE > size(cellList[])
+ar.edu.unrc.game2048.Board.mergeAdjacentEqualCells(java.util.List):::EXIT
+ar.edu.unrc.game2048.Board.$assertionsDisabled == orig(ar.edu.unrc.game2048.Board.$assertionsDisabled)
+cellList[].getClass().getName() elements == ar.edu.unrc.game2048.Cell.class
+return[].getClass().getName() elements == ar.edu.unrc.game2048.Cell.class
+ar.edu.unrc.game2048.Board.MAX_SIZE > size(return[])
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE <= this.size
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE >= size(return[])
+ar.edu.unrc.game2048.Board.WINNING_VALUE > size(return[])
+ar.edu.unrc.game2048.Board.moveDown():::ENTER
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.size
+ar.edu.unrc.game2048.Board.MAX_SIZE != this.score
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE <= this.size
+ar.edu.unrc.game2048.Board.moveDown():::EXIT
+ar.edu.unrc.game2048.Board.$assertionsDisabled == orig(ar.edu.unrc.game2048.Board.$assertionsDisabled)
+(return == false)  ==>  (ar.edu.unrc.game2048.Board.$assertionsDisabled == return)
+(return == false)  ==>  (ar.edu.unrc.game2048.Board.DEFAULT_SIZE == this.size)
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.size
+ar.edu.unrc.game2048.Board.MAX_SIZE != this.score
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE <= this.size
+ar.edu.unrc.game2048.Board.moveDown():::EXIT;condition="return == true"
+ar.edu.unrc.game2048.Board.moveDown():::EXIT;condition="not(return == true)"
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE == this.size
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE == orig(this.size)
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE == size(this.grid[])
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE == orig(size(this.grid[]))
+ar.edu.unrc.game2048.Board.$assertionsDisabled == return
+ar.edu.unrc.game2048.Board.moveLeft():::ENTER
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.size
+ar.edu.unrc.game2048.Board.MAX_SIZE != this.score
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE <= this.size
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE != this.score
+ar.edu.unrc.game2048.Board.moveLeft():::EXIT
+ar.edu.unrc.game2048.Board.$assertionsDisabled == orig(ar.edu.unrc.game2048.Board.$assertionsDisabled)
+(return == false)  ==>  (ar.edu.unrc.game2048.Board.$assertionsDisabled == return)
+(return == false)  ==>  (ar.edu.unrc.game2048.Board.DEFAULT_SIZE != this.score)
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.size
+ar.edu.unrc.game2048.Board.MAX_SIZE != this.score
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE <= this.size
+ar.edu.unrc.game2048.Board.moveLeft():::EXIT;condition="return == true"
+ar.edu.unrc.game2048.Board.moveLeft():::EXIT;condition="not(return == true)"
+ar.edu.unrc.game2048.Board.$assertionsDisabled == return
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE != this.score
+ar.edu.unrc.game2048.Board.moveRight():::ENTER
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE <= this.size
+ar.edu.unrc.game2048.Board.moveRight():::EXIT
+ar.edu.unrc.game2048.Board.$assertionsDisabled == orig(ar.edu.unrc.game2048.Board.$assertionsDisabled)
+(return == false)  ==>  (ar.edu.unrc.game2048.Board.$assertionsDisabled == return)
+(return == false)  ==>  (ar.edu.unrc.game2048.Board.DEFAULT_SIZE != orig(this.score))
+(return == false)  ==>  (ar.edu.unrc.game2048.Board.DEFAULT_SIZE != this.score)
+(return == false)  ==>  (ar.edu.unrc.game2048.Board.DEFAULT_SIZE == this.size)
+(return == false)  ==>  (ar.edu.unrc.game2048.Board.MAX_SIZE != orig(this.score))
+(return == false)  ==>  (ar.edu.unrc.game2048.Board.MAX_SIZE != this.score)
+(return == false)  ==>  (ar.edu.unrc.game2048.Board.MAX_SIZE > this.size)
+(return == false)  ==>  (orig(this.score) % ar.edu.unrc.game2048.Board.DEFAULT_SIZE == 0)
+(return == false)  ==>  (this.score % ar.edu.unrc.game2048.Board.DEFAULT_SIZE == 0)
+(return == false)  ==>  (this.str.getClass().getName() == ar.edu.unrc.game2048.GenerateRandomCellStrategy.class)
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE <= this.size
+ar.edu.unrc.game2048.Board.moveRight():::EXIT;condition="return == true"
+ar.edu.unrc.game2048.Board.moveRight():::EXIT;condition="not(return == true)"
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE == this.size
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE == orig(this.size)
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE == size(this.grid[])
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE == orig(size(this.grid[]))
+ar.edu.unrc.game2048.Board.$assertionsDisabled == return
+this.str.getClass().getName() == ar.edu.unrc.game2048.GenerateRandomCellStrategy.class
+ar.edu.unrc.game2048.Board.MAX_SIZE != this.score
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE != this.score
+this.score % ar.edu.unrc.game2048.Board.DEFAULT_SIZE == 0
+ar.edu.unrc.game2048.Board.moveUp():::ENTER
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE <= this.size
+ar.edu.unrc.game2048.Board.moveUp():::EXIT
+ar.edu.unrc.game2048.Board.$assertionsDisabled == orig(ar.edu.unrc.game2048.Board.$assertionsDisabled)
+(return == false)  ==>  (ar.edu.unrc.game2048.Board.$assertionsDisabled == return)
+(return == false)  ==>  (ar.edu.unrc.game2048.Board.DEFAULT_SIZE != orig(this.score))
+(return == false)  ==>  (ar.edu.unrc.game2048.Board.DEFAULT_SIZE != this.score)
+(return == false)  ==>  (ar.edu.unrc.game2048.Board.MAX_SIZE > this.size)
+(return == false)  ==>  (orig(this.score) % ar.edu.unrc.game2048.Board.DEFAULT_SIZE == 0)
+(return == false)  ==>  (this.score % ar.edu.unrc.game2048.Board.DEFAULT_SIZE == 0)
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE <= this.size
+ar.edu.unrc.game2048.Board.moveUp():::EXIT;condition="return == true"
+ar.edu.unrc.game2048.Board.moveUp():::EXIT;condition="not(return == true)"
+ar.edu.unrc.game2048.Board.$assertionsDisabled == return
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.size
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE != this.score
+this.score % ar.edu.unrc.game2048.Board.DEFAULT_SIZE == 0
+ar.edu.unrc.game2048.Board.removeEmptyCells(java.util.List):::ENTER
+cellList[].getClass().getName() elements == ar.edu.unrc.game2048.Cell.class
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE <= this.size
+ar.edu.unrc.game2048.Board.removeEmptyCells(java.util.List):::EXIT
+ar.edu.unrc.game2048.Board.$assertionsDisabled == orig(ar.edu.unrc.game2048.Board.$assertionsDisabled)
+cellList[].getClass().getName() elements == ar.edu.unrc.game2048.Cell.class
+return[].getClass().getName() elements == ar.edu.unrc.game2048.Cell.class
+ar.edu.unrc.game2048.Board.MAX_SIZE > size(return[])
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE <= this.size
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE != size(cellList[])-1
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE >= size(return[])
+ar.edu.unrc.game2048.Board.WINNING_VALUE > size(return[])
+ar.edu.unrc.game2048.Board.repOk():::ENTER
+ar.edu.unrc.game2048.Board.repOk():::EXIT654
+ar.edu.unrc.game2048.Board.repOk():::EXIT654;condition="return == true"
+ar.edu.unrc.game2048.Board.repOk():::EXIT
+ar.edu.unrc.game2048.Board.$assertionsDisabled == orig(ar.edu.unrc.game2048.Board.$assertionsDisabled)
+ar.edu.unrc.game2048.Board.repOk():::EXIT;condition="return == true"
+ar.edu.unrc.game2048.Board.setCell(int, int, ar.edu.unrc.game2048.Cell):::ENTER
+ar.edu.unrc.game2048.Board.$assertionsDisabled == ar.edu.unrc.game2048.Cell.$assertionsDisabled
+ar.edu.unrc.game2048.Cell.EMPTY != null
+ar.edu.unrc.game2048.Cell.EMPTY.value == 0
+ar.edu.unrc.game2048.Board.MAX_SIZE > row
+ar.edu.unrc.game2048.Board.MAX_SIZE > col
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE != row
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE != col
+ar.edu.unrc.game2048.Board.WINNING_VALUE > row
+ar.edu.unrc.game2048.Board.WINNING_VALUE > col
+ar.edu.unrc.game2048.Board.WINNING_VALUE >= cell.value
+this.score >= ar.edu.unrc.game2048.Cell.EMPTY.value
+row >= ar.edu.unrc.game2048.Cell.EMPTY.value
+col >= ar.edu.unrc.game2048.Cell.EMPTY.value
+cell.value >= ar.edu.unrc.game2048.Cell.EMPTY.value
+ar.edu.unrc.game2048.Cell.EMPTY.value <= size(this.grid[])-1
+ar.edu.unrc.game2048.Board.setCell(int, int, ar.edu.unrc.game2048.Cell):::EXIT
+ar.edu.unrc.game2048.Board.$assertionsDisabled == ar.edu.unrc.game2048.Cell.$assertionsDisabled
+ar.edu.unrc.game2048.Board.$assertionsDisabled == orig(ar.edu.unrc.game2048.Board.$assertionsDisabled)
+ar.edu.unrc.game2048.Board.$assertionsDisabled == orig(ar.edu.unrc.game2048.Cell.$assertionsDisabled)
+ar.edu.unrc.game2048.Cell.EMPTY == orig(ar.edu.unrc.game2048.Cell.EMPTY)
+ar.edu.unrc.game2048.Cell.EMPTY.value == orig(ar.edu.unrc.game2048.Cell.EMPTY.value)
+ar.edu.unrc.game2048.Cell.EMPTY != null
+ar.edu.unrc.game2048.Cell.EMPTY.value == 0
+ar.edu.unrc.game2048.Board.WINNING_VALUE >= cell.value
+this.score >= ar.edu.unrc.game2048.Cell.EMPTY.value
+cell.value >= ar.edu.unrc.game2048.Cell.EMPTY.value
+ar.edu.unrc.game2048.Cell.EMPTY.value <= orig(row)
+ar.edu.unrc.game2048.Cell.EMPTY.value <= orig(col)
+ar.edu.unrc.game2048.Cell.EMPTY.value <= size(this.grid[])-1
+ar.edu.unrc.game2048.Board.toString():::ENTER
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.size
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE >= this.size
+ar.edu.unrc.game2048.Board.toString():::EXIT
+ar.edu.unrc.game2048.Board.$assertionsDisabled == orig(ar.edu.unrc.game2048.Board.$assertionsDisabled)
+ar.edu.unrc.game2048.Board.MAX_SIZE > this.size
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE >= this.size
+ar.edu.unrc.game2048.Board.updateCell(int, int, ar.edu.unrc.game2048.Cell):::ENTER
+ar.edu.unrc.game2048.Board.$assertionsDisabled == ar.edu.unrc.game2048.Cell.$assertionsDisabled
+ar.edu.unrc.game2048.Cell.EMPTY != null
+ar.edu.unrc.game2048.Cell.EMPTY.value == 0
+ar.edu.unrc.game2048.Board.MAX_SIZE > row
+ar.edu.unrc.game2048.Board.MAX_SIZE > col
+ar.edu.unrc.game2048.Board.WINNING_VALUE > row
+ar.edu.unrc.game2048.Board.WINNING_VALUE > col
+ar.edu.unrc.game2048.Board.WINNING_VALUE >= newCell.value
+this.score >= ar.edu.unrc.game2048.Cell.EMPTY.value
+row >= ar.edu.unrc.game2048.Cell.EMPTY.value
+col >= ar.edu.unrc.game2048.Cell.EMPTY.value
+newCell.value >= ar.edu.unrc.game2048.Cell.EMPTY.value
+ar.edu.unrc.game2048.Cell.EMPTY.value <= size(this.grid[])-1
+ar.edu.unrc.game2048.Board.updateCell(int, int, ar.edu.unrc.game2048.Cell):::EXIT
+ar.edu.unrc.game2048.Board.$assertionsDisabled == ar.edu.unrc.game2048.Cell.$assertionsDisabled
+ar.edu.unrc.game2048.Board.$assertionsDisabled == orig(ar.edu.unrc.game2048.Board.$assertionsDisabled)
+ar.edu.unrc.game2048.Board.$assertionsDisabled == orig(ar.edu.unrc.game2048.Cell.$assertionsDisabled)
+ar.edu.unrc.game2048.Cell.EMPTY == orig(ar.edu.unrc.game2048.Cell.EMPTY)
+ar.edu.unrc.game2048.Cell.EMPTY.value == orig(ar.edu.unrc.game2048.Cell.EMPTY.value)
+ar.edu.unrc.game2048.Cell.EMPTY != null
+ar.edu.unrc.game2048.Cell.EMPTY.value == 0
+ar.edu.unrc.game2048.Board.WINNING_VALUE >= newCell.value
+this.score >= ar.edu.unrc.game2048.Cell.EMPTY.value
+newCell.value >= ar.edu.unrc.game2048.Cell.EMPTY.value
+ar.edu.unrc.game2048.Cell.EMPTY.value <= orig(row)
+ar.edu.unrc.game2048.Cell.EMPTY.value <= orig(col)
+ar.edu.unrc.game2048.Cell.EMPTY.value <= size(this.grid[])-1
+ar.edu.unrc.game2048.Board.validatePosition(int, int):::ENTER
+ar.edu.unrc.game2048.Board.MAX_SIZE > row
+ar.edu.unrc.game2048.Board.MAX_SIZE > col
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE != row
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE != col
+ar.edu.unrc.game2048.Board.WINNING_VALUE > row
+ar.edu.unrc.game2048.Board.WINNING_VALUE > col
+ar.edu.unrc.game2048.Board.validatePosition(int, int):::EXIT
+ar.edu.unrc.game2048.Board.$assertionsDisabled == orig(ar.edu.unrc.game2048.Board.$assertionsDisabled)
+ar.edu.unrc.game2048.BoardTest:::OBJECT
+ar.edu.unrc.game2048.BoardTest.BoardTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.addRandomTileTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.addRandomTileTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.addTileToFullBoardThrowsTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.addTileToFullBoardThrowsTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.clearBoard(ar.edu.unrc.game2048.Board):::ENTER
+board.grid.getClass().getName() == ar.edu.unrc.game2048.Cell[][].class
+ar.edu.unrc.game2048.Board.$assertionsDisabled == false
+ar.edu.unrc.game2048.Board.MAX_SIZE > board.size
+ar.edu.unrc.game2048.Board.MAX_SIZE > board.score
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE >= board.size
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE >= board.score
+ar.edu.unrc.game2048.Board.WINNING_VALUE > board.size
+ar.edu.unrc.game2048.Board.WINNING_VALUE > board.score
+ar.edu.unrc.game2048.BoardTest.clearBoard(ar.edu.unrc.game2048.Board):::EXIT
+ar.edu.unrc.game2048.Board.$assertionsDisabled == orig(ar.edu.unrc.game2048.Board.$assertionsDisabled)
+board.grid.getClass().getName() == ar.edu.unrc.game2048.Cell[][].class
+ar.edu.unrc.game2048.Board.$assertionsDisabled == false
+ar.edu.unrc.game2048.Board.MAX_SIZE > board.size
+ar.edu.unrc.game2048.Board.MAX_SIZE > board.score
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE >= board.size
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE >= board.score
+ar.edu.unrc.game2048.Board.WINNING_VALUE > board.size
+ar.edu.unrc.game2048.Board.WINNING_VALUE > board.score
+ar.edu.unrc.game2048.BoardTest.constructorCopyTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.constructorCopyTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.constructorDefaultTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.constructorDefaultTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.constructorInvalidSize():::ENTER
+ar.edu.unrc.game2048.BoardTest.constructorInvalidSize():::EXIT
+ar.edu.unrc.game2048.BoardTest.constructorValidSizeTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.constructorValidSizeTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.copyDeterministicBoardTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.copyDeterministicBoardTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.deterministicStrategyBoardTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.deterministicStrategyBoardTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.deterministicStrategyResetOnConstruction():::ENTER
+ar.edu.unrc.game2048.BoardTest.deterministicStrategyResetOnConstruction():::EXIT
+ar.edu.unrc.game2048.BoardTest.directionEnumExists():::ENTER
+ar.edu.unrc.game2048.BoardTest.directionEnumExists():::EXIT
+ar.edu.unrc.game2048.BoardTest.equalsDifferentGridSameSizeTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.equalsDifferentGridSameSizeTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.equalsDifferentSizeTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.equalsDifferentSizeTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.equalsDifferentTypeTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.equalsDifferentTypeTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.equalsIdenticalBoardsTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.equalsIdenticalBoardsTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.equalsNullTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.equalsNullTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.equalsSameGridDifferentScoreTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.equalsSameGridDifferentScoreTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.equalsSameObjectTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.equalsSameObjectTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.fillBoard(ar.edu.unrc.game2048.Board, int):::ENTER
+board.grid.getClass().getName() == ar.edu.unrc.game2048.Cell[][].class
+board.str.getClass().getName() == ar.edu.unrc.game2048.GenerateRandomCellStrategy.class
+ar.edu.unrc.game2048.Board.$assertionsDisabled == false
+ar.edu.unrc.game2048.BoardTest.fillBoard(ar.edu.unrc.game2048.Board, int):::EXIT
+ar.edu.unrc.game2048.Board.$assertionsDisabled == orig(ar.edu.unrc.game2048.Board.$assertionsDisabled)
+board.grid.getClass().getName() == ar.edu.unrc.game2048.Cell[][].class
+board.str.getClass().getName() == ar.edu.unrc.game2048.GenerateRandomCellStrategy.class
+ar.edu.unrc.game2048.Board.$assertionsDisabled == false
+ar.edu.unrc.game2048.BoardTest.getCellNotNull():::ENTER
+ar.edu.unrc.game2048.BoardTest.getCellNotNull():::EXIT
+ar.edu.unrc.game2048.BoardTest.hasEmptyCellsFalseTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.hasEmptyCellsFalseTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.hasEmptyCellsTrueTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.hasEmptyCellsTrueTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.hashCodeDifferentBoardsTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.hashCodeDifferentBoardsTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.hashCodeEqualBoardsTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.hashCodeEqualBoardsTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.initialTilesAreTwoOrFour():::ENTER
+ar.edu.unrc.game2048.BoardTest.initialTilesAreTwoOrFour():::EXIT
+ar.edu.unrc.game2048.BoardTest.invalidGetCell():::ENTER
+ar.edu.unrc.game2048.BoardTest.invalidGetCell():::EXIT
+ar.edu.unrc.game2048.BoardTest.isFullFalseTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.isFullFalseTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.isFullTrueTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.isFullTrueTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.isLosingBoardFailedMergedInLastColumn():::ENTER
+ar.edu.unrc.game2048.BoardTest.isLosingBoardFailedMergedInLastColumn():::EXIT
+ar.edu.unrc.game2048.BoardTest.isLosingBoardRWithNoMovesPossible():::ENTER
+ar.edu.unrc.game2048.BoardTest.isLosingBoardRWithNoMovesPossible():::EXIT
+ar.edu.unrc.game2048.BoardTest.isLosingBoardTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.isLosingBoardTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.isLosingBoardWithEmptyCells():::ENTER
+ar.edu.unrc.game2048.BoardTest.isLosingBoardWithEmptyCells():::EXIT
+ar.edu.unrc.game2048.BoardTest.isLosingBoardWithHorizontalMerge():::ENTER
+ar.edu.unrc.game2048.BoardTest.isLosingBoardWithHorizontalMerge():::EXIT
+ar.edu.unrc.game2048.BoardTest.isLosingBoardWithVerticalMerge():::ENTER
+ar.edu.unrc.game2048.BoardTest.isLosingBoardWithVerticalMerge():::EXIT
+ar.edu.unrc.game2048.BoardTest.isWinningBoardReturnsFalseWithoutWinningValue():::ENTER
+ar.edu.unrc.game2048.BoardTest.isWinningBoardReturnsFalseWithoutWinningValue():::EXIT
+ar.edu.unrc.game2048.BoardTest.isWinningBoardReturnsTrueWithWinningValue():::ENTER
+ar.edu.unrc.game2048.BoardTest.isWinningBoardReturnsTrueWithWinningValue():::EXIT
+ar.edu.unrc.game2048.BoardTest.moveDownAddsRandomTile():::ENTER
+ar.edu.unrc.game2048.BoardTest.moveDownAddsRandomTile():::EXIT
+ar.edu.unrc.game2048.BoardTest.moveDownFourEqualTiles():::ENTER
+ar.edu.unrc.game2048.BoardTest.moveDownFourEqualTiles():::EXIT
+ar.edu.unrc.game2048.BoardTest.moveDownOnEmptyBoard():::ENTER
+ar.edu.unrc.game2048.BoardTest.moveDownOnEmptyBoard():::EXIT
+ar.edu.unrc.game2048.BoardTest.moveDownThreeEqualTiles():::ENTER
+ar.edu.unrc.game2048.BoardTest.moveDownThreeEqualTiles():::EXIT
+ar.edu.unrc.game2048.BoardTest.moveDowndoesNotProccesTopRow():::ENTER
+ar.edu.unrc.game2048.BoardTest.moveDowndoesNotProccesTopRow():::EXIT
+ar.edu.unrc.game2048.BoardTest.moveLeftAddsRandomTile():::ENTER
+ar.edu.unrc.game2048.BoardTest.moveLeftAddsRandomTile():::EXIT
+ar.edu.unrc.game2048.BoardTest.moveLeftFourEqualTiles():::ENTER
+ar.edu.unrc.game2048.BoardTest.moveLeftFourEqualTiles():::EXIT
+ar.edu.unrc.game2048.BoardTest.moveLeftOnEmptyBoard():::ENTER
+ar.edu.unrc.game2048.BoardTest.moveLeftOnEmptyBoard():::EXIT
+ar.edu.unrc.game2048.BoardTest.moveLeftThreeEqualTiles():::ENTER
+ar.edu.unrc.game2048.BoardTest.moveLeftThreeEqualTiles():::EXIT
+ar.edu.unrc.game2048.BoardTest.moveRightAddsRandomTile():::ENTER
+ar.edu.unrc.game2048.BoardTest.moveRightAddsRandomTile():::EXIT
+ar.edu.unrc.game2048.BoardTest.moveRightFourEqualTiles():::ENTER
+ar.edu.unrc.game2048.BoardTest.moveRightFourEqualTiles():::EXIT
+ar.edu.unrc.game2048.BoardTest.moveRightOnEmptyBoard():::ENTER
+ar.edu.unrc.game2048.BoardTest.moveRightOnEmptyBoard():::EXIT
+ar.edu.unrc.game2048.BoardTest.moveRightThreeEqualTiles():::ENTER
+ar.edu.unrc.game2048.BoardTest.moveRightThreeEqualTiles():::EXIT
+ar.edu.unrc.game2048.BoardTest.moveUpAddsRandomTile():::ENTER
+ar.edu.unrc.game2048.BoardTest.moveUpAddsRandomTile():::EXIT
+ar.edu.unrc.game2048.BoardTest.moveUpFourEqualTiles():::ENTER
+ar.edu.unrc.game2048.BoardTest.moveUpFourEqualTiles():::EXIT
+ar.edu.unrc.game2048.BoardTest.moveUpOnEmptyBoard():::ENTER
+ar.edu.unrc.game2048.BoardTest.moveUpOnEmptyBoard():::EXIT
+ar.edu.unrc.game2048.BoardTest.moveUpSkipsNonMergingTiles():::ENTER
+ar.edu.unrc.game2048.BoardTest.moveUpSkipsNonMergingTiles():::EXIT
+ar.edu.unrc.game2048.BoardTest.moveUpThreeEqualTiles():::ENTER
+ar.edu.unrc.game2048.BoardTest.moveUpThreeEqualTiles():::EXIT
+ar.edu.unrc.game2048.BoardTest.positionEqualsDifferentColumnTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.positionEqualsDifferentColumnTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.positionEqualsDifferentRowTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.positionEqualsDifferentRowTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.positionEqualsDifferentTypeTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.positionEqualsDifferentTypeTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.positionEqualsNullTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.positionEqualsNullTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.positionEqualsReflexiveTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.positionEqualsReflexiveTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.positionEqualsSameCoordinatesTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.positionEqualsSameCoordinatesTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.positionEqualsSelf():::ENTER
+ar.edu.unrc.game2048.BoardTest.positionEqualsSelf():::EXIT
+ar.edu.unrc.game2048.BoardTest.positionHashCodeDifferentPositionsTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.positionHashCodeDifferentPositionsTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.positionHashCodeEqualPositionsTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.positionHashCodeEqualPositionsTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.positionToStringTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.positionToStringTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.randomTilePlacementVariesTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.randomTilePlacementVariesTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.repOkTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.repOkTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.setAndGetTheSameValueTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.setAndGetTheSameValueTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.setCellAlreadySetted():::ENTER
+ar.edu.unrc.game2048.BoardTest.setCellAlreadySetted():::EXIT
+ar.edu.unrc.game2048.BoardTest.setCellOutofBoundsTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.setCellOutofBoundsTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.setNotNullCellTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.setNotNullCellTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.testEmptyPositionsDynamicallyUpdatedOnSetCell():::ENTER
+ar.edu.unrc.game2048.BoardTest.testEmptyPositionsDynamicallyUpdatedOnSetCell():::EXIT
+ar.edu.unrc.game2048.BoardTest.testEmptyPositionsDynamicallyUpdatedOnSlideAndMerge():::ENTER
+ar.edu.unrc.game2048.BoardTest.testEmptyPositionsDynamicallyUpdatedOnSlideAndMerge():::EXIT
+ar.edu.unrc.game2048.BoardTest.testEmptyPositionsOnFullBoardAndTransitions():::ENTER
+ar.edu.unrc.game2048.BoardTest.testEmptyPositionsOnFullBoardAndTransitions():::EXIT
+ar.edu.unrc.game2048.BoardTest.testMoveDownSingleTile():::ENTER
+ar.edu.unrc.game2048.BoardTest.testMoveDownSingleTile():::EXIT
+ar.edu.unrc.game2048.BoardTest.testMoveDownTwoEqualTiles():::ENTER
+ar.edu.unrc.game2048.BoardTest.testMoveDownTwoEqualTiles():::EXIT
+ar.edu.unrc.game2048.BoardTest.testMoveLeftSingleTile():::ENTER
+ar.edu.unrc.game2048.BoardTest.testMoveLeftSingleTile():::EXIT
+ar.edu.unrc.game2048.BoardTest.testMoveLeftTwoEqualTiles():::ENTER
+ar.edu.unrc.game2048.BoardTest.testMoveLeftTwoEqualTiles():::EXIT
+ar.edu.unrc.game2048.BoardTest.testMoveRightSingleTile():::ENTER
+ar.edu.unrc.game2048.BoardTest.testMoveRightSingleTile():::EXIT
+ar.edu.unrc.game2048.BoardTest.testMoveRightTwoEqualTiles():::ENTER
+ar.edu.unrc.game2048.BoardTest.testMoveRightTwoEqualTiles():::EXIT
+ar.edu.unrc.game2048.BoardTest.testMoveUpSingleTile():::ENTER
+ar.edu.unrc.game2048.BoardTest.testMoveUpSingleTile():::EXIT
+ar.edu.unrc.game2048.BoardTest.testMoveUpTwoEqualTiles():::ENTER
+ar.edu.unrc.game2048.BoardTest.testMoveUpTwoEqualTiles():::EXIT
+ar.edu.unrc.game2048.BoardTest.toStringEmptyBoardTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.toStringEmptyBoardTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.toStringTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.toStringTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.winingBoardTest():::ENTER
+ar.edu.unrc.game2048.BoardTest.winingBoardTest():::EXIT
+ar.edu.unrc.game2048.BoardTest.winingBoardTestTwo():::ENTER
+ar.edu.unrc.game2048.BoardTest.winingBoardTestTwo():::EXIT
+ar.edu.unrc.game2048.Cell:::CLASS
+ar.edu.unrc.game2048.Cell.EMPTY != null
+ar.edu.unrc.game2048.Cell.EMPTY.value == 0
+ar.edu.unrc.game2048.Cell.$assertionsDisabled == false
+ar.edu.unrc.game2048.Cell:::OBJECT
+this.value >= ar.edu.unrc.game2048.Cell.EMPTY.value
+ar.edu.unrc.game2048.Cell.Cell(int):::ENTER
+ar.edu.unrc.game2048.Cell.Cell(int):::EXIT
+ar.edu.unrc.game2048.Cell.canMergeWith(ar.edu.unrc.game2048.Cell):::ENTER
+ar.edu.unrc.game2048.Cell.EMPTY.value <= other.value
+ar.edu.unrc.game2048.Cell.canMergeWith(ar.edu.unrc.game2048.Cell):::EXIT73
+this.value == ar.edu.unrc.game2048.Cell.EMPTY.value
+this.value == orig(ar.edu.unrc.game2048.Cell.EMPTY.value)
+ar.edu.unrc.game2048.Cell.$assertionsDisabled == return
+ar.edu.unrc.game2048.Cell.EMPTY has only one value
+ar.edu.unrc.game2048.Cell.canMergeWith(ar.edu.unrc.game2048.Cell):::EXIT73;condition="not(return == true)"
+ar.edu.unrc.game2048.Cell.canMergeWith(ar.edu.unrc.game2048.Cell):::EXIT75
+(return == false)  ==>  (ar.edu.unrc.game2048.Cell.$assertionsDisabled == return)
+(return == true)  ==>  (ar.edu.unrc.game2048.Cell.EMPTY.value < other.value)
+(return == true)  ==>  (this.value > ar.edu.unrc.game2048.Cell.EMPTY.value)
+ar.edu.unrc.game2048.Cell.canMergeWith(ar.edu.unrc.game2048.Cell):::EXIT75;condition="return == true"
+ar.edu.unrc.game2048.Cell.canMergeWith(ar.edu.unrc.game2048.Cell):::EXIT75;condition="not(return == true)"
+ar.edu.unrc.game2048.Cell.canMergeWith(ar.edu.unrc.game2048.Cell):::EXIT
+ar.edu.unrc.game2048.Cell.EMPTY == orig(ar.edu.unrc.game2048.Cell.EMPTY)
+ar.edu.unrc.game2048.Cell.EMPTY.value == orig(ar.edu.unrc.game2048.Cell.EMPTY.value)
+ar.edu.unrc.game2048.Cell.$assertionsDisabled == orig(ar.edu.unrc.game2048.Cell.$assertionsDisabled)
+(return == false)  ==>  (ar.edu.unrc.game2048.Cell.$assertionsDisabled == return)
+(return == true)  ==>  (ar.edu.unrc.game2048.Cell.EMPTY.value < other.value)
+(return == true)  ==>  (this.value > ar.edu.unrc.game2048.Cell.EMPTY.value)
+ar.edu.unrc.game2048.Cell.EMPTY.value <= other.value
+ar.edu.unrc.game2048.Cell.canMergeWith(ar.edu.unrc.game2048.Cell):::EXIT;condition="return == true"
+this.value > ar.edu.unrc.game2048.Cell.EMPTY.value
+ar.edu.unrc.game2048.Cell.canMergeWith(ar.edu.unrc.game2048.Cell):::EXIT;condition="not(return == true)"
+ar.edu.unrc.game2048.Cell.$assertionsDisabled == return
+ar.edu.unrc.game2048.Cell.equals(java.lang.Object):::ENTER
+ar.edu.unrc.game2048.Cell.equals(java.lang.Object):::EXIT105
+orig(o.getClass().getName()) == ar.edu.unrc.game2048.Cell.class
+ar.edu.unrc.game2048.Cell.equals(java.lang.Object):::EXIT105;condition="return == true"
+ar.edu.unrc.game2048.Cell.equals(java.lang.Object):::EXIT106
+ar.edu.unrc.game2048.Cell.$assertionsDisabled == return
+ar.edu.unrc.game2048.Cell.equals(java.lang.Object):::EXIT106;condition="not(return == true)"
+ar.edu.unrc.game2048.Cell.equals(java.lang.Object):::EXIT108
+(return == false)  ==>  (ar.edu.unrc.game2048.Cell.$assertionsDisabled == return)
+orig(o.getClass().getName()) == ar.edu.unrc.game2048.Cell.class
+ar.edu.unrc.game2048.Cell.equals(java.lang.Object):::EXIT108;condition="return == true"
+ar.edu.unrc.game2048.Cell.equals(java.lang.Object):::EXIT108;condition="not(return == true)"
+ar.edu.unrc.game2048.Cell.equals(java.lang.Object):::EXIT
+ar.edu.unrc.game2048.Cell.EMPTY == orig(ar.edu.unrc.game2048.Cell.EMPTY)
+ar.edu.unrc.game2048.Cell.EMPTY.value == orig(ar.edu.unrc.game2048.Cell.EMPTY.value)
+ar.edu.unrc.game2048.Cell.$assertionsDisabled == orig(ar.edu.unrc.game2048.Cell.$assertionsDisabled)
+(return == false)  ==>  (ar.edu.unrc.game2048.Cell.$assertionsDisabled == return)
+(return == true)  ==>  (orig(o.getClass().getName()) == ar.edu.unrc.game2048.Cell.class)
+ar.edu.unrc.game2048.Cell.equals(java.lang.Object):::EXIT;condition="return == true"
+orig(o.getClass().getName()) == ar.edu.unrc.game2048.Cell.class
+ar.edu.unrc.game2048.Cell.equals(java.lang.Object):::EXIT;condition="not(return == true)"
+ar.edu.unrc.game2048.Cell.$assertionsDisabled == return
+ar.edu.unrc.game2048.Cell.getValue():::ENTER
+ar.edu.unrc.game2048.Cell.getValue():::EXIT
+ar.edu.unrc.game2048.Cell.EMPTY == orig(ar.edu.unrc.game2048.Cell.EMPTY)
+ar.edu.unrc.game2048.Cell.EMPTY.value == orig(ar.edu.unrc.game2048.Cell.EMPTY.value)
+ar.edu.unrc.game2048.Cell.$assertionsDisabled == orig(ar.edu.unrc.game2048.Cell.$assertionsDisabled)
+ar.edu.unrc.game2048.Cell.EMPTY.value <= return
+ar.edu.unrc.game2048.Cell.hashCode():::ENTER
+ar.edu.unrc.game2048.Cell.EMPTY has only one value
+ar.edu.unrc.game2048.Cell.hashCode():::EXIT
+ar.edu.unrc.game2048.Cell.EMPTY == orig(ar.edu.unrc.game2048.Cell.EMPTY)
+ar.edu.unrc.game2048.Cell.EMPTY.value == orig(ar.edu.unrc.game2048.Cell.EMPTY.value)
+ar.edu.unrc.game2048.Cell.$assertionsDisabled == orig(ar.edu.unrc.game2048.Cell.$assertionsDisabled)
+ar.edu.unrc.game2048.Cell.EMPTY has only one value
+ar.edu.unrc.game2048.Cell.EMPTY.value < return
+ar.edu.unrc.game2048.Cell.isEmpty():::ENTER
+ar.edu.unrc.game2048.Cell.isEmpty():::EXIT
+ar.edu.unrc.game2048.Cell.EMPTY == orig(ar.edu.unrc.game2048.Cell.EMPTY)
+ar.edu.unrc.game2048.Cell.EMPTY.value == orig(ar.edu.unrc.game2048.Cell.EMPTY.value)
+ar.edu.unrc.game2048.Cell.$assertionsDisabled == orig(ar.edu.unrc.game2048.Cell.$assertionsDisabled)
+(this.value == 0)  <==>  (this.value == ar.edu.unrc.game2048.Cell.EMPTY.value)
+ar.edu.unrc.game2048.Cell.isEmpty():::EXIT;condition="return == true"
+this.value == ar.edu.unrc.game2048.Cell.EMPTY.value
+this.value == orig(ar.edu.unrc.game2048.Cell.EMPTY.value)
+ar.edu.unrc.game2048.Cell.isEmpty():::EXIT;condition="not(return == true)"
+ar.edu.unrc.game2048.Cell.$assertionsDisabled == return
+this.value > ar.edu.unrc.game2048.Cell.EMPTY.value
+ar.edu.unrc.game2048.Cell.mergeWith(ar.edu.unrc.game2048.Cell):::ENTER
+this.value > ar.edu.unrc.game2048.Cell.EMPTY.value
+ar.edu.unrc.game2048.Cell.mergeWith(ar.edu.unrc.game2048.Cell):::EXIT
+ar.edu.unrc.game2048.Cell.EMPTY == orig(ar.edu.unrc.game2048.Cell.EMPTY)
+ar.edu.unrc.game2048.Cell.EMPTY.value == orig(ar.edu.unrc.game2048.Cell.EMPTY.value)
+ar.edu.unrc.game2048.Cell.$assertionsDisabled == orig(ar.edu.unrc.game2048.Cell.$assertionsDisabled)
+this.value > ar.edu.unrc.game2048.Cell.EMPTY.value
+ar.edu.unrc.game2048.Cell.EMPTY.value < return.value
+ar.edu.unrc.game2048.Cell.repOK():::ENTER
+ar.edu.unrc.game2048.Cell.repOK():::EXIT143
+ar.edu.unrc.game2048.Cell.repOK():::EXIT143;condition="return == true"
+ar.edu.unrc.game2048.Cell.repOK():::EXIT
+ar.edu.unrc.game2048.Cell.EMPTY == orig(ar.edu.unrc.game2048.Cell.EMPTY)
+ar.edu.unrc.game2048.Cell.EMPTY.value == orig(ar.edu.unrc.game2048.Cell.EMPTY.value)
+ar.edu.unrc.game2048.Cell.$assertionsDisabled == orig(ar.edu.unrc.game2048.Cell.$assertionsDisabled)
+ar.edu.unrc.game2048.Cell.repOK():::EXIT;condition="return == true"
+ar.edu.unrc.game2048.Cell.toString():::ENTER
+ar.edu.unrc.game2048.Cell.EMPTY has only one value
+ar.edu.unrc.game2048.Cell.toString():::EXIT
+ar.edu.unrc.game2048.Cell.EMPTY == orig(ar.edu.unrc.game2048.Cell.EMPTY)
+ar.edu.unrc.game2048.Cell.EMPTY.value == orig(ar.edu.unrc.game2048.Cell.EMPTY.value)
+ar.edu.unrc.game2048.Cell.$assertionsDisabled == orig(ar.edu.unrc.game2048.Cell.$assertionsDisabled)
+ar.edu.unrc.game2048.Cell.EMPTY has only one value
+ar.edu.unrc.game2048.CellTest:::OBJECT
+ar.edu.unrc.game2048.CellTest.CellTest():::EXIT
+ar.edu.unrc.game2048.CellTest.canMergeWithInvalid():::ENTER
+ar.edu.unrc.game2048.CellTest.canMergeWithInvalid():::EXIT
+ar.edu.unrc.game2048.CellTest.canMergeWithOtherNull():::ENTER
+ar.edu.unrc.game2048.CellTest.canMergeWithOtherNull():::EXIT
+ar.edu.unrc.game2048.CellTest.createCellWithANotPowerOfTwo():::ENTER
+ar.edu.unrc.game2048.CellTest.createCellWithANotPowerOfTwo():::EXIT
+ar.edu.unrc.game2048.CellTest.createCellWithAPowerOfTwo():::ENTER
+ar.edu.unrc.game2048.CellTest.createCellWithAPowerOfTwo():::EXIT
+ar.edu.unrc.game2048.CellTest.createCellWithNegativeValue():::ENTER
+ar.edu.unrc.game2048.CellTest.createCellWithNegativeValue():::EXIT
+ar.edu.unrc.game2048.CellTest.createCellWithZero():::ENTER
+ar.edu.unrc.game2048.CellTest.createCellWithZero():::EXIT
+ar.edu.unrc.game2048.CellTest.equalToCellEmpty():::ENTER
+ar.edu.unrc.game2048.CellTest.equalToCellEmpty():::EXIT
+ar.edu.unrc.game2048.CellTest.equalToItself():::ENTER
+ar.edu.unrc.game2048.CellTest.equalToItself():::EXIT
+ar.edu.unrc.game2048.CellTest.equalToNull():::ENTER
+ar.edu.unrc.game2048.CellTest.equalToNull():::EXIT
+ar.edu.unrc.game2048.CellTest.equalToOtherType():::ENTER
+ar.edu.unrc.game2048.CellTest.equalToOtherType():::EXIT
+ar.edu.unrc.game2048.CellTest.equalsTest():::ENTER
+ar.edu.unrc.game2048.CellTest.equalsTest():::EXIT
+ar.edu.unrc.game2048.CellTest.nonEqualsTest():::ENTER
+ar.edu.unrc.game2048.CellTest.nonEqualsTest():::EXIT
+ar.edu.unrc.game2048.CellTest.testEmptyCell():::ENTER
+ar.edu.unrc.game2048.CellTest.testEmptyCell():::EXIT
+ar.edu.unrc.game2048.CellTest.testHashCode():::ENTER
+ar.edu.unrc.game2048.CellTest.testHashCode():::EXIT
+ar.edu.unrc.game2048.CellTest.testRepOK():::ENTER
+ar.edu.unrc.game2048.CellTest.testRepOK():::EXIT
+ar.edu.unrc.game2048.CellTest.testRepOKAllPowersOfTwo():::ENTER
+ar.edu.unrc.game2048.CellTest.testRepOKAllPowersOfTwo():::EXIT
+ar.edu.unrc.game2048.CellTest.testRepOKConsistency():::ENTER
+ar.edu.unrc.game2048.CellTest.testRepOKConsistency():::EXIT
+ar.edu.unrc.game2048.CellTest.testRepOKInvalidValues():::ENTER
+ar.edu.unrc.game2048.CellTest.testRepOKInvalidValues():::EXIT
+ar.edu.unrc.game2048.CellTest.testValidCell():::ENTER
+ar.edu.unrc.game2048.CellTest.testValidCell():::EXIT
+ar.edu.unrc.game2048.GenerateDeterministicCellStrategy:::OBJECT
+ar.edu.unrc.game2048.GenerateDeterministicCellStrategy.addTile(ar.edu.unrc.game2048.Board):::ENTER
+board.grid.getClass().getName() == ar.edu.unrc.game2048.Cell[][].class
+board.str.getClass().getName() == ar.edu.unrc.game2048.GenerateDeterministicCellStrategy.class
+ar.edu.unrc.game2048.Board.$assertionsDisabled == false
+this.values[] elements < ar.edu.unrc.game2048.Board.WINNING_VALUE
+this.count < ar.edu.unrc.game2048.Board.MAX_SIZE
+this.count != ar.edu.unrc.game2048.Board.DEFAULT_SIZE
+this.count < ar.edu.unrc.game2048.Board.WINNING_VALUE
+ar.edu.unrc.game2048.Board.MAX_SIZE >= board.size
+ar.edu.unrc.game2048.Board.MAX_SIZE > board.score
+ar.edu.unrc.game2048.Board.MAX_SIZE > size(this.values[])
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE != size(this.values[])
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE != size(board.grid[])-1
+ar.edu.unrc.game2048.Board.WINNING_VALUE > board.size
+ar.edu.unrc.game2048.Board.WINNING_VALUE > board.score
+ar.edu.unrc.game2048.Board.WINNING_VALUE > size(this.values[])
+ar.edu.unrc.game2048.GenerateDeterministicCellStrategy.addTile(ar.edu.unrc.game2048.Board):::EXIT
+ar.edu.unrc.game2048.Board.$assertionsDisabled == orig(ar.edu.unrc.game2048.Board.$assertionsDisabled)
+board.grid.getClass().getName() == ar.edu.unrc.game2048.Cell[][].class
+board.str.getClass().getName() == ar.edu.unrc.game2048.GenerateDeterministicCellStrategy.class
+ar.edu.unrc.game2048.Board.$assertionsDisabled == false
+this.values[] elements < ar.edu.unrc.game2048.Board.WINNING_VALUE
+this.count < ar.edu.unrc.game2048.Board.MAX_SIZE
+this.count != ar.edu.unrc.game2048.Board.DEFAULT_SIZE
+this.count < ar.edu.unrc.game2048.Board.WINNING_VALUE
+ar.edu.unrc.game2048.Board.MAX_SIZE >= board.size
+ar.edu.unrc.game2048.Board.MAX_SIZE > board.score
+ar.edu.unrc.game2048.Board.MAX_SIZE > orig(this.count)
+ar.edu.unrc.game2048.Board.MAX_SIZE > size(this.values[])
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE != size(this.values[])
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE != size(board.grid[])-1
+ar.edu.unrc.game2048.Board.WINNING_VALUE > board.size
+ar.edu.unrc.game2048.Board.WINNING_VALUE > board.score
+ar.edu.unrc.game2048.Board.WINNING_VALUE > orig(this.count)
+ar.edu.unrc.game2048.Board.WINNING_VALUE > size(this.values[])
+ar.edu.unrc.game2048.GenerateRandomCellStrategy:::OBJECT
+ar.edu.unrc.game2048.GenerateRandomCellStrategy.addTile(ar.edu.unrc.game2048.Board):::ENTER
+b.grid.getClass().getName() == ar.edu.unrc.game2048.Cell[][].class
+b.str.getClass().getName() == ar.edu.unrc.game2048.GenerateRandomCellStrategy.class
+ar.edu.unrc.game2048.Board.$assertionsDisabled == false
+ar.edu.unrc.game2048.Board.MAX_SIZE > b.size
+b.score % ar.edu.unrc.game2048.Board.DEFAULT_SIZE == 0
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE != size(b.grid[])-1
+ar.edu.unrc.game2048.Board.WINNING_VALUE > b.size
+ar.edu.unrc.game2048.Board.WINNING_VALUE != b.score
+ar.edu.unrc.game2048.GenerateRandomCellStrategy.addTile(ar.edu.unrc.game2048.Board):::EXIT
+ar.edu.unrc.game2048.Board.$assertionsDisabled == orig(ar.edu.unrc.game2048.Board.$assertionsDisabled)
+b.grid.getClass().getName() == ar.edu.unrc.game2048.Cell[][].class
+b.str.getClass().getName() == ar.edu.unrc.game2048.GenerateRandomCellStrategy.class
+ar.edu.unrc.game2048.Board.$assertionsDisabled == false
+ar.edu.unrc.game2048.Board.MAX_SIZE > b.size
+b.score % ar.edu.unrc.game2048.Board.DEFAULT_SIZE == 0
+ar.edu.unrc.game2048.Board.DEFAULT_SIZE != size(b.grid[])-1
+ar.edu.unrc.game2048.Board.WINNING_VALUE > b.size
+ar.edu.unrc.game2048.Board.WINNING_VALUE != b.score
